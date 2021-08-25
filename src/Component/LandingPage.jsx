@@ -1,9 +1,30 @@
-import React from 'react'
+import React,{useRef,useState} from 'react'
 import "./LandingPage.css"
 import { BrowserRouter, Route, Link,Switch } from "react-router-dom";
 import { fontSize } from '@material-ui/system';
+import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
+import ApartmentSharpIcon from '@material-ui/icons/ApartmentSharp';
+import FlightIcon from '@material-ui/icons/Flight';
+
 
 const LandingPage = () => {
+     const inputRef=useRef(null)
+     const profession=[{"title": "Hotel","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"},
+     {"title": "Car","url":"https://static.thenounproject.com/png/72-200.png"},
+     {"title": "Flight","url":"https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/444/aiga_departingflights-512.png"},{"title": "Bundle","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"}]
+     const [myprofession,setMyprofession]=useState("")
+     function display(){
+       
+        
+        inputRef.current.style.background="white";
+        inputRef.current.style.border="none";
+        inputRef.current.style.borderTop="3px solid red";
+        inputRef.current.style.color="#db3939";
+
+
+
+    
+     }
     return (
         <>
         <div classsName="container">
@@ -15,20 +36,47 @@ const LandingPage = () => {
             <div className="background-pic">
             
                 <div className="card">
-                <div className="hotel"><i class="fas fa-hotel"></i>
-                <p>Hotel</p></div>
-                <div className="car"><i class="fas fa-car"></i>
-                <p>Cars</p>
-                </div>
-                <div className="flight">
-                    <span><img style={{"height":"15px"}} src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/444/aiga_departingflights-512.png" alt="loading" /></span><p>Flight</p></div>
-                <div className="bundle">
-                    <span> <i  style={{"height":"5px"}} class="fas fa-hotel"></i> 
-                    <img style={{"height":"10px"}} src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/444/aiga_departingflights-512.png" alt="loading" /></span>
-                    <i  style={{"height":"5px"}}  class="fas fa-car"></i>
-                    <p>Bundles</p></div>
-              </div>
+                {/* <div style={{"display":"flex"}}>
+                <div className="hotel"  > */}
+               <div style={{"display":"flex"}} >
+                 {
+                     profession.map(profession=>(
+                       <button  className="cardButton" type="button" key={profession} onClick={()=> setMyprofession(profession)}>
+                            {<img src={profession.url} alt="loading" style={{"height":"15px"}}/>}<br/>
+                      {profession.title}
+                
+                   
+                       </button>
+                       
+                     )
 
+                     ) 
+                 }
+                 </div>
+                  {myprofession.title==="Hotel" &&<form>
+                      <h1>Hotel</h1>
+                        <input type="text" />
+                        <button>submit</button></form>}
+                         {myprofession.title==="Car" &&<form>
+                              <h1>Car</h1>
+                        <input type="text" />
+                        <button>submit</button></form>}
+                         {myprofession.title==="Flight" &&<form>
+                              <h1>Flight</h1>
+                        <input type="text" />
+                        <button>submit</button></form>}
+                          {myprofession.title==="Bundle" &&<form>
+                               <h1>Bundle</h1>
+                        <input type="text" />
+                        <button>submit</button></form>}
+                </div>
+               
+               
+               
+               <div className="learn_more">
+                   <img src="https://tpc.googlesyndication.com/simgad/16159382514288190354?" alt="loading" style={{"height":"40px","marginLeft":"50px","marginTop":"10px"}}/>
+                   <span style={{"marginTop":"18px","marginRight":"60px"}}>Give the world a shot<button className="laernButton">Learn more</button></span>
+               </div>
             </div>
             <div className="why-Choose">
                 <img src="https://ak-secure.hotwirestatic.com/current/static/images//shared-experiments/RTB19/uhp-confidence-992@2x.png" alt="loading" />
