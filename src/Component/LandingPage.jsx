@@ -53,14 +53,21 @@ const LandingPage = () => {
                      ) 
                  }
                  </div>
-                  {myprofession.title==="Hotel" &&<div>
+                  {myprofession.title==="Hotel" &&<div className="formLabel">
                       <form action="">
                           <label>Destination</label>
                           <div className="input">
                           <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
                           </div>
+                          <label>Checkin</label>    <label >Checkout</label> <br/>
                           <input type="date" />
+                      
                           <input type="date" />
+                          <label >Guest</label>
+                          <div className="input">
+                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div>
+                          <button>Find a hotel</button>
                       </form>
                   </div>}
                          {myprofession.title==="Car" &&<form>
