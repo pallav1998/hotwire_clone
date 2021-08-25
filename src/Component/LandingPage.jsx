@@ -53,10 +53,16 @@ const LandingPage = () => {
                      ) 
                  }
                  </div>
-                  {myprofession.title==="Hotel" &&<form>
-                      <h1>Hotel</h1>
-                        <input type="text" />
-                        <button>submit</button></form>}
+                  {myprofession.title==="Hotel" &&<div>
+                      <form action="">
+                          <label>Destination</label>
+                          <div className="input">
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div>
+                          <input type="date" />
+                          <input type="date" />
+                      </form>
+                  </div>}
                          {myprofession.title==="Car" &&<form>
                               <h1>Car</h1>
                         <input type="text" />
@@ -94,7 +100,7 @@ const LandingPage = () => {
                 <p className="ptag">Send a download link to your mobile device</p>
              <div className="inp">
                 <div className="input">
-                     <i class="fa fa-mobile" aria-hidden="true"><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"30px"}}/></i>
+                     <i class="fa fa-mobile" aria-hidden="true"  style={{"marginTop":"5px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px"}}/></i>
                 </div>
                  <button className="btn">Send me The Link</button>
               </div>
@@ -104,7 +110,7 @@ const LandingPage = () => {
              <div className="email">
                <div><i class="far fa-envelope"></i><span className="emailHeading"> Unlock an extra $10 off your next Hot Rate® Hotel when you sign up for email!</span></div>
                 <div className="emailInput">
-                    <input type="text" /> <button  className="btn" style={{"marginTop":"-15px"}}>Subscribe</button>
+                    <input type="text" /> <button  className="btn" style={{"marginTop":"-10px"}}>Subscribe</button>
                     <p style={{"fontSize":"11px"}}>By subscribing, I acknowledge that I have read and accept the Privacy policy.</p>
                 </div>
              </div>

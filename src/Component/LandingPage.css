@@ -147,8 +147,9 @@ width: 150px;
     padding-top:30px;
 }
 .emailInput>input{
-    font-size: xx-large;
-
+    font-size:large;
+   height: 30px;
+   width: 300px;
 }
 .emailHeading{
   font-size:large;
