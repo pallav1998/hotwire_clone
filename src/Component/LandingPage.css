@@ -811,6 +811,7 @@ justify-content: space-between;
  *{
     margin: 0;
     padding: 0;
+    /* border: 1px solid black; */
 }
 .container{
     overflow: hidden;
@@ -897,7 +898,7 @@ justify-content: space-between;
 
 }
 .grid>div{
-    width: 100%;
+    width: 99%;
     height: 400px;
     display: block;
 
