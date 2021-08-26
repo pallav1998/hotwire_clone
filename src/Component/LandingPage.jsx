@@ -38,7 +38,7 @@ const LandingPage = () => {
                 <div className="card">
                 {/* <div style={{"display":"flex"}}>
                 <div className="hotel"  > */}
-               <div style={{"display":"flex"}} >
+               <div style={{"display":"flex" ,"width":"99.8%"}} >
                  {
                      profession.map(profession=>(
                        <button  className="cardButton" type="button" key={profession} onClick={()=> setMyprofession(profession)}>
@@ -54,7 +54,9 @@ const LandingPage = () => {
                  }
                  </div>
                   {myprofession.title==="Hotel" &&<div className="formLabel">
+                      
                       <form action="">
+                          <h1 clas="formHeading">Search hotel deals</h1>
                           <label>Destination</label>
                           <div className="input">
                           <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
@@ -107,7 +109,7 @@ const LandingPage = () => {
                 <p className="ptag">Send a download link to your mobile device</p>
              <div className="inp">
                 <div className="input">
-                     <i class="fa fa-mobile" aria-hidden="true"  style={{"marginTop":"5px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px"}}/></i>
+                     <i class="fa fa-mobile" aria-hidden="true"  style={{"marginTop":"5px","marginLeft":"10px"}}><input className="mobile-Input" type="text" placeholder="ex:207-2074444"/></i>
                 </div>
                  <button className="btn">Send me The Link</button>
               </div>
@@ -122,7 +124,7 @@ const LandingPage = () => {
                 </div>
              </div>
              <div className="headings">
-                <h1>Find 4-Star Hotels at 2-Star Prices</h1>
+                <h1 className="find">Find 4-Star Hotels at 2-Star Prices</h1>
              </div>
              <div className="grid">
             
@@ -146,7 +148,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Atlanta, GA</h2>
                <del>$238</del> <span className="doller_symbol">$</span><span className="doller">139</span> <span>/night</span>
                  </div>
              </div>
@@ -170,7 +172,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Boston, MA</h2>
                <del>$198</del> <span className="doller_symbol">$</span><span className="doller">123</span> <span>/night</span>
                  </div>
        
@@ -197,7 +199,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Seatel, WA</h2>
                <del>$228</del> <span className="doller_symbol">$</span><span className="doller">159</span> <span>/night</span>
                  </div>
            
@@ -221,7 +223,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Nashville, Tn</h2>
                <del>$185</del> <span className="doller_symbol">$</span><span className="doller">119</span> <span>/night</span>
                  </div>
          
@@ -245,7 +247,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>San Francisco, CA</h2>
                <del>$435</del> <span className="doller_symbol">$</span><span className="doller">169</span> <span>/night</span>
                  </div>
             
@@ -267,9 +269,9 @@ const LandingPage = () => {
                  <div className="star">
                   <h3><i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
-                  <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
-                  <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <i class="fas fa-star-half-alt" style={{"color":"#f5f3f0"}}></i></h3>
+                  <p>4-star Hot rate hotel in</p>
+                  <h2>Chicago, IL</h2>
                <del>$204</del> <span className="doller_symbol">$</span><span className="doller">139</span> <span>/night</span>
                  </div>
             
@@ -293,7 +295,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Montreal, Canada</h2>
                <del>$238</del> <span className="doller_symbol">$</span><span className="doller">139</span> <span>/night</span>
                  </div>
             
@@ -315,9 +317,9 @@ const LandingPage = () => {
                  <div className="star">
                   <h3><i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
-                  <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
-                  <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <i class="fas fa-star" style={{"color":"#f5f3f0"}}></i></h3>
+                  <p>4-star Hot rate hotel in</p>
+                  <h2>Orlando, FL</h2>
                <del>$228</del> <span className="doller_symbol">$</span><span className="doller">154</span> <span>/night</span>
                  </div>
              
@@ -341,7 +343,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>TORONTO, CANADA</h2>
                <del>$278</del> <span className="doller_symbol">$</span><span className="doller">143</span> <span>/night</span>
                  </div>
          
@@ -364,7 +366,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Los Angles, CA</h2>
                <del>$296</del> <span className="doller_symbol">$</span><span className="doller">183</span> <span>/night</span>
                  </div>
            
@@ -387,7 +389,7 @@ const LandingPage = () => {
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
                   <p>4.5-star Hot rate hotel in</p>
-                  <h2>Manhattan, NY</h2>
+                  <h2>Denver, CO</h2>
                <del>$238</del> <span className="doller_symbol">$</span><span className="doller">139</span> <span>/night</span>
                  </div>
 
@@ -408,8 +410,8 @@ const LandingPage = () => {
                  <div className="star">
                   <h3><i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
                   <i class="fas fa-star" style={{"color":"orange"}}></i><i class="fas fa-star" style={{"color":"orange"}}></i>
-                  <i class="fas fa-star-half-alt" style={{"color":"orange"}}></i></h3>
-                  <p>4.5-star Hot rate hotel in</p>
+                  <i class="fas fa-star" style={{"color":"#f5f3f0"}}></i></h3>
+                  <p>4-star Hot rate hotel in</p>
                   <h2>Manhattan, NY</h2>
                <del>$165</del> <span className="doller_symbol">$</span><span className="doller">99</span> <span>/night</span>
                  </div>

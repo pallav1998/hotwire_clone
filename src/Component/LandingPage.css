@@ -1,10 +1,22 @@
+
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+
+
 *{
     margin: 0;
     padding: 0;
 }
 .container{
+    overflow: hidden;
+    background-color: yellow;
     width: 100%;
     height: auto;
+   
 }
 .top-banner{
     display: flex;
@@ -12,6 +24,7 @@
     height: 30px;
     background-color: #db3939;
     color: white;
+   
 
  
 }
@@ -41,6 +54,7 @@
     height: 221px;
     background-color:hsl(0, 0%, 90%);
     text-align: center;
+  
 }
 .why-Choose>img{
   
@@ -51,7 +65,7 @@
     display: flex;
     width: 59%;
     margin: 30px auto;
-   
+  
 }
 /* .mobileImg{
   
@@ -90,6 +104,14 @@ margin-left: 5px;
 .playstore-img>img{
 margin-top: 15px;
 width: 150px;
+}
+.input>i>input{
+    border:none;
+    background:none;
+    font-size:20px;
+    outline:none;
+    margin-Left:20px;
+    margin-Top:5px
 }
 .input{
     border-radius: 5px;
@@ -140,6 +162,7 @@ width: 150px;
     width: 70%;
     margin:0 auto;
     display: flex;
+   
 }
 .email>div{
     width: 48%;
@@ -204,7 +227,7 @@ width: 150px;
 }
 .advertisement>div{
     width: 47%;
-    border-top: 1px solid black;
+ 
 }
 .advertisement>p{
     margin-top: -15px;
@@ -233,6 +256,7 @@ width: 150px;
      width: 70%;
      margin: 0 auto;
      margin-bottom: 20px;
+   
 }
 .detail{
     display: flex;
@@ -248,6 +272,7 @@ width: 150px;
      width: 70%;
      margin: 0 auto;
      margin-bottom: 20px;
+    
 }
 .footer>div{
     width: 25%;
@@ -262,6 +287,7 @@ width: 150px;
     font-size: 14px;
     z-index: 20;
     color: #2a2e3b;
+   
 }
 .copyRight{
      width: 70%;
@@ -415,7 +441,7 @@ width: 150px;
 .learn_more{
 margin: 0 auto;
 width:70%;
-border:1px solid black ;
+
 height:60px;
 position:relative ;
 display:flex;
@@ -441,7 +467,7 @@ justify-content: space-between;
 }
 .form{
     margin-top: 20px;
-    border: 1px solid black;
+    
 }
 .cardButton{
     height: 50px;
@@ -494,4 +520,800 @@ justify-content: space-between;
     padding: 0 16px;
     width: 100%;
     float: left;
+}
+/************************* Large devices (laptops/desktops, 992px and up) ************************************************************/
+@media only screen and (min-width: 70px) and (max-width:89px){
+    *{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+ 
+   
+}
+    .email{
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 120px;
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+}
+.email>div{
+    width: 48%;
+    margin-left: 2%;
+    padding-top:30px;
+}
+.emailInput>input{
+    font-size:small;
+   height: 30px;
+   width: 200px;
+}
+.emailHeading{
+  font-size:large;
+}
+    
+    .input{
+    border-radius: 5px;
+  border: 1px solid black;
+     
+}
+.inp{
+      display: block;
+      width: 100%;
+      font-size: 200;
+}
+.background-pic{
+    display: flex;
+    background-image:url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-1440px-2x.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 760px;
+
+
+    
+}
+.btn{
+    position: relative;
+    margin-left: 5px;
+    background-color: #46db39;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+.grid{
+    display: grid;
+  
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(4,auto);
+    gap: 20px;
+    width: 100%;
+    margin:0 auto;
+  
+ 
+
+}
+.grid>div{
+    width: 240px;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.mobile{
+    display: flex;
+    width: 70%;
+    margin: 30px auto;
+   
+}
+.detail{
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+}
+} 
+
+/* *******************************@media only screen and (min-width: 900px) and (max-width: 1200px) ***********************************/
+@media only screen and (min-width: 901px) and (max-width: 1200px)  {
+ .email{
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 120px;
+    width: 75%;
+    margin:0 auto;
+    display: flex;
+    margin-left: 15%;
+}
+.email>div{
+    width: 48%;
+    margin-left: 2%;
+    padding-top:30px;
+}
+.emailInput>input{
+    font-size:small;
+   height: 30px;
+   width: 180px;
+}
+.emailHeading{
+  font-size:large;
+}
+
+
+    .grid{
+    display: grid;
+  
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(4,auto);
+    gap: 25px;
+    width: 70%;
+    margin:0 auto;
+  
+
+
+}
+.grid>div{
+    width: 210px;
+    height: 350px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+
+.mobile{
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+  
+}
+.input{
+    border-radius: 5px;
+
+     
+}
+.inp{
+      display: flex;
+      width: 60%;
+      font-size: 300;
+}
+.btn{
+    position: relative;
+    margin-left: 5px;
+    background-color: #db3939;
+    border-color: #1b2fe9;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+} 
+
+/* @media only screen and (max-width: 778px) and (min-width:899px)  {
+.grid{
+    display: grid;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 25px;
+    width: 70%;
+    margin:0 auto;
+  
+
+
+}
+.grid>div{
+    width: 250px;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.ad>div{
+    width: 100px;
+    height: 250px;
+    margin-top: 20px;
+  
+}
+
+
+} 
+@media only screen and (max-width:777px)  {
+.grid{
+    display: none;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 25px;
+    width: 70%;
+    margin:0 auto;
+  
+
+
+}
+
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.ad>div{
+    width: 100px;
+    height: 250px;
+    margin-top: 20px;
+  
+}
+
+} */
+@media only screen and (min-width: 601px) and (max-width:900px){
+ *{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  
+   
+}
+    .email{
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: auto;
+    width: 87%;
+    margin:0 auto;
+   
+}
+.email>div{
+    /* width: 100%;
+    margin-left: 2%;
+    padding-top:30px; */
+}
+.emailInput>input{
+    font-size:small;
+   height: 30px;
+   width: 200px;
+   margin-bottom: 20px;
+}
+.emailHeading{
+  font-size:large;
+}
+    
+    .input{
+    border-radius: 5px;
+  border: 1px solid black;
+     
+}
+.inp{
+      display: block;
+      width: 100%;
+      font-size: 200;
+}
+.background-pic{
+    display: flex;
+    background-image:url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-1440px-2x.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 760px;
+
+
+    
+}
+.btn{
+    position: relative;
+    margin-left: 5px;
+    background-color: #1506f1;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+    
+}
+.grid{
+    display: grid;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 20px;
+    width: 100%;
+    margin:0 auto;
+
+
+}
+.grid>div{
+    width: 100%;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.mobile{
+    display: flex;
+    width: 100%;
+    margin: 30px auto;
+ 
+}
+.detail{
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+}.why-Choose{
+    width: 100%;
+    height: 221px;
+    background-color:hsl(0, 0%, 90%);
+    text-align: center;
+     
+}
+.why-Choose>img{
+  
+      width: 100%;
+      
+}
+.mobileImg>img{
+    height: 235px;
+    width: 183px;
+}
+.heading{
+    width: 40%;
+    margin-left: 30px;
+}
+.heading>h1{
+    color: #db3939;
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic,Open Sans,Arial,sans-serif;
+}
+.heading>h3{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2e3b;
+    margin-top: 10px;
+    font-family: Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+.playstore{
+   
+}
+.playstore-img1>img{
+width: 100px;
+margin-top: 15px;
+margin-left: 5px;
+}
+.playstore-img>img{
+margin-top: 15px;
+width: 100px;
+}
+.input{
+    border-radius: 5px;
+  border: 1px solid black;
+     
+}
+.inp{
+    
+      width: 100%;
+      font-size: 500;
+}
+.detail{
+    display: block;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+}
+}
+@media only screen and (min-width: 400px) and (max-width:600px){
+ *{
+    margin: 0;
+    padding: 0;
+   
+}
+.container{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+   
+}
+.top-banner{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #db3939;
+    color: white;
+  }
+    .email{
+    display: block;
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 200px;
+    width: 100%;
+    margin:0 auto;
+   
+}
+.email>div{
+    width:98%;
+
+    padding-top:30px;
+}
+.emailInput>input{
+    font-size:small;
+   height: 40px;
+   width: 300px;
+   margin-bottom: 20px;
+}
+.emailHeading{
+  font-size:large;
+}
+    
+    .input{
+    border-radius: 5px;
+
+     
+}
+.inp{
+      display: block;
+      width: 100%;
+      font-size: 200;
+}
+.background-pic{
+
+    background-image:url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-575px-2x.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    
+   background-repeat: no-repeat;
+   background-clip: border-box;
+
+
+    
+}
+.btn{
+    position: relative;
+    margin-left: 5px;
+    background-color: #06f1f1;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+    
+}
+.grid{
+    display: none;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 20px;
+    width: 100%;
+    margin:0 auto;
+  
+
+}
+.grid>div{
+    width: 100%;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.mobile{
+  
+    width: 100%;
+    margin: 0 auto;
+    
+    background: linear-gradient(139.75deg,#db3939,#7d32ad 103.01%);;
+   
+}
+.detail{
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+}.why-Choose{
+    width: 100%;
+    height: 700px;
+    /* background-color:hsl(0, 0%, 90%); */
+    text-align: center;
+   
+     background-image: url(https://ak-secure.hotwirestatic.com/current/static/images//shared-experiments/RTB19/uhp-confidence-320@2x.png);
+    background-size: cover;
+   background-repeat: no-repeat;
+   background-clip: border-box;
+   
+
+    }
+.why-Choose>img{
+  
+display: none;
+      
+}
+.mobileImg>img{
+    height: 335px;
+    width:203px;
+    margin-left: 0;
+}
+.heading{
+    width: 50%;
+
+}
+.heading>h1{
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic,Open Sans,Arial,sans-serif;
+}
+.heading>h3{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2e3b;
+    margin-top: 10px;
+    font-family: Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+.playstore{
+   
+}
+.playstore-img1>img{
+width: 70px;
+margin-top: 15px;
+margin-left: 5px;
+}
+.playstore-img>img{
+margin-top: 15px;
+width: 70px;
+}
+.input{
+ border-radius: 5px;
+  border: 1px solid black;
+  height: 40px;
+     
+}
+.inp{
+      margin-top: 5px;
+      width: 80%;
+      font-size: 100;
+  
+}
+.detail{
+    display: block;
+    gap: 5px;
+    width: 100%;
+    font-size: small;
+}
+.footer{
+    display: block;
+     width: 95%;
+     margin: 0 auto;
+     margin-bottom: 20px;
+    margin-left: 20px;
+}
+.footer>div{
+    width: 90%;
+    font-size: 14px;
+   
+    color: #2a2e3b;
+}
+.footer-first{
+    width: 92%;
+    margin: 0 auto;
+    background: #f8f9fa;
+    font-size: 14px;
+    z-index: 20;
+    color: #2a2e3b;
+    
+}
+.copyRight{
+     width: 90%;
+     margin: 0 auto;
+}
+.copyRight>img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+.footer>div>p{
+    margin-top: 5px;
+}
+.footer>div>h3{
+    margin-top: 25px;
+}
+.copyRight>p{
+    margin-bottom: 35px;
+    font-size:small;
+}
+
+.formLabel>label{
+    font-weight: 700;
+    color: #2a2e3b;
+    font-size: 14px;
+    line-height: 18px;
+
+    
+}
+.formLabel>form>button{
+    border-radius: 1000px;
+   
+  
+    line-height: 42px;
+     font-size: 18px;
+    font-weight: 900;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+   box-sizing: border-box;
+    user-select: none;
+    transition: all .1s cubic-bezier(.215,.61,.355,1);
+    background-color: #db3939;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: none;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+     margin-top: 24px;
+    padding: 0 16px;
+    width: 100%;
+     margin-top:20px ;
+    float: left;
+    margin-bottom: 20px;
+}
+.card{
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 0;
+    position: absolute;
+    justify-content: center;
+    margin-left: 0;
+         background: white;
+}
+.card>div>button{
+    width: 100%;
+}
+.formLabel>form>input{
+    margin-top: 20px;
+}
+.input{
+    margin-top: 20px;
+}
+.formHeading{
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic,Open Sans,Arial,sans-serif;
+        font-size: 32px;
+    line-height: 36px;
+ 
+    color: #db3939;
+    text-align: center;
+}
+.learn_more{
+    display: none;
+}
+.ptag{display: none;}
+.para{
+    display: none;
+}
+.find{
+    display: none;
+}
+.input>i>input{
+    border:none;
+    background:none;
+    font-size:15px;
+    outline:none;
+    margin-left:20px;
+    padding-top: -30px;
+    color:white;
+}
 }
