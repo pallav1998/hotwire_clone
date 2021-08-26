@@ -14,10 +14,9 @@ import PetsIcon from '@material-ui/icons/Pets';
 import Grid from "@material-ui/core/Grid"
 import Rating from '@material-ui/lab/Rating';
 import { useEffect, useMemo, useState } from "react"
-import  Button  from "@material-ui/core/Button";
-
-
+// import  Button  from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +26,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:"center",
     margin:"auto",
   },
-  
+  cp:{
+    color:"rgb(3,133,46)",
+  }
 }));
 
 
@@ -247,34 +248,35 @@ export function HotelResult() {
             <div className={styles.gcc10}>
 
               <div> <p>Choose your room</p> </div>
-              <div> 
+              <div className={styles.gcc11}> 
                   <div>
                   <p>  Hotel chooses bed type</p>  
-                  <p>  Learn more</p>  
+                  <p >  Learn more</p>  
                   </div>
                   <div>
-                  <p>  ${price}/night</p>  
+                  <p> <span> ${price}</span> /night</p>  
                   <p>  Price details</p>  
                   </div>
                   <div>
-                    <Button variant="contained" color="secondary">Reserve</Button>
+                    <button >Reserve</button>
                     <p>It takes only 2 minutes</p>
                   </div>    
               </div>
-              <div> 
-                  <div>
-                  <p>Standard Room, 2 Double Beds, Non Smoking</p>  
-                  </div>
-                  <div>
-                  <p>  ${price+5}/night</p>  
-                  <p>  Price details</p>  
-                  </div>
-                  <div>
-                    <Button variant="contained" color="secondary">Reserve</Button>
-                    <p>It takes only 2 minutes</p>
-                  </div>    
+            </div>
+            <div className={styles.gcc12}>
+              <div><p>Location</p><p>{resultData?.address?.line1}</p></div>
+              <div className={styles.gcc121}>
+                <div>
+                  <CircularProgress 
+                className={classes.cp}
+                style={{color:"rgb(3,133,46)"}}
+                variant="determinate" {...{value:(ratinghotel/5)*100}}/>
+                </div>
+                <div>
+                  <p>Great Location!</p>
+                  <p>Our customers rated the location of this hotel a  <span>{ratinghotel}</span> out of <span> 5</span></p>
+                </div>
               </div>
-
             </div>
             </div>
           </Grid>

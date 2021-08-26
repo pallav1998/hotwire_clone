@@ -163,7 +163,7 @@
     height: 18px; 
 }
 .gc91>div:nth-child(1)>div:nth-child(2) span{
-display: block;
+  display: block;
 }
 .gc91>div:nth-child(1)>div:nth-child(2){
     display: flex;
@@ -215,5 +215,62 @@ display: block;
 }
 .gcc10>div:nth-child(1) p{
     color: rgb(42,46,59);
-    font-size: 22px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.gcc10>div{
+    display: flex;
+    justify-content: space-between;
+}
+.gcc11>div:nth-child(1)>p:nth-child(1){
+    color: rgb(42,46,59);
+    font-weight: 700;
+}
+.gcc11>div:nth-child(1)>p:nth-child(2),.gcc11>div:nth-child(2)>p:nth-child(2){
+    font-weight: 700;
+    color: rgb(33,107,222);
+    cursor: pointer;
+}
+.gcc11>div:nth-child(2) span{
+    color: rgb(219,57,57);
+    font-size: 30px; 
+    font-weight: 700;
+    display: inline-block;
+}
+.gcc11>div:nth-child(3) button{
+    background-color: rgb(219,57,57);
+    color: white;
+    border-radius: 24px;
+    width: 179px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+.gcc10{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(222,225,231);
+}
+.gcc12>div:nth-child(1)>p:nth-child(1){
+    color: rgb(42,46,59);
+    font-weight: 700;
+    font-size: 20px;
+}
+.gcc12>div:nth-child(1)>p:nth-child(2){
+    color: rgb(42,46,59);
+    font-weight: 700;
+    font-size: 14px;
+}
+.gcc121{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gcc121>div>p:nth-child(1){
+    color: rgb(146, 207, 14);
+    font-weight: 700;
+}
+.gcc121>div:nth-child(2)>p:nth-child(2) span{
+    color: rgb(42,46,59);
+    font-weight: 700;
 }
