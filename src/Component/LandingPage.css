@@ -28,6 +28,18 @@
 
  
 }
+/* .formLabel>form{
+    background: white;
+    height: auto;
+} */
+.formLabel>label{
+    font-weight: 700;
+    color: #2a2e3b;
+    font-size: 14px;
+    line-height: 18px;
+
+    
+}
 .background-pic{
     display: flex;
     background-image:url(https://tpc.googlesyndication.com/simgad/5827262374090483608?);
@@ -224,6 +236,7 @@ width: 150px;
     display: flex;
     margin: 0 auto;
     margin-top: 40px;
+    
 }
 .advertisement>div{
     width: 47%;
@@ -239,6 +252,7 @@ width: 150px;
     display: flex;
     margin: 0 auto;
       gap:9%;
+      
       margin-bottom: 20px;
 }
 .ad>div{
@@ -393,11 +407,13 @@ width: 150px;
     /* display: flex; */
     width: 300px;
     height: 500px;
-    background-color: white;
+    /* background-color: white; */
     margin-top: 2%;
     margin-left: 14%;
     position: absolute;
     justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .hotel,.car,.flight,.bundle{
     background-color: #f8f9fa;
@@ -1315,6 +1331,6 @@ width: 70px;
     outline:none;
     margin-left:20px;
     padding-top: -30px;
-    color:white;
+    color:black;
 }
 }

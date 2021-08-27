@@ -5,13 +5,16 @@ import { fontSize } from '@material-ui/system';
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 import ApartmentSharpIcon from '@material-ui/icons/ApartmentSharp';
 import FlightIcon from '@material-ui/icons/Flight';
+import axios from 'axios';
+import { HistoryRounded } from '@material-ui/icons';
 
 
 const LandingPage = () => {
      const inputRef=useRef(null)
-     const profession=[{"title": "Hotel","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"},
-     {"title": "Car","url":"https://static.thenounproject.com/png/72-200.png"},
-     {"title": "Flight","url":"https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/444/aiga_departingflights-512.png"},{"title": "Bundle","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"}]
+     const profession=[
+         {"title": "Hotel","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"},
+         {"title": "Car","url":"https://static.thenounproject.com/png/72-200.png"},
+         {"title": "Flight","url":"https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/444/aiga_departingflights-512.png"},{"title": "Bundle","url":"https://uxwing.com/wp-content/themes/uxwing/download/31-location-travel-map/hotel.png"}]
      const [myprofession,setMyprofession]=useState("")
      function display(){
        
@@ -20,11 +23,31 @@ const LandingPage = () => {
         inputRef.current.style.border="none";
         inputRef.current.style.borderTop="3px solid red";
         inputRef.current.style.color="#db3939";
+}
 
+//*********************************** */ form data*****************************************
 
+const [user,setUser]=useState({destination:"",
+checkin:"",
+checkout:"",
+guest:""
 
-    
-     }
+})
+
+const {destination,checkin,checkout,guest}=user;
+const onInputchange=e=>{
+setUser({...user,[e.target.name]:e.target.value})
+}
+
+// ***********************************************use HistoryRounded.push************************************************
+const onsubmit=async e=>{
+    e.preventDefault()
+    await axios.put("http://localhost:3004/search",user)
+// ******************************  use HistoryRounded.push*
+ 
+    }
+  
+
     return (
         <>
         <div classsName="container">
@@ -55,26 +78,26 @@ const LandingPage = () => {
                  </div>
                   {myprofession.title==="Hotel" &&<div className="formLabel">
                       
-                      <form action="">
+                      <form onSubmit={e=>onsubmit(e)}>
                           <h1 clas="formHeading">Search hotel deals</h1>
                           <label>Destination</label>
-                          <div className="input">
-                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
                           </div>
                           <label>Checkin</label>    <label >Checkout</label> <br/>
-                          <input type="date" />
+                          <input type="date" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
                       
-                          <input type="date" />
+                          <input type="date" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/>
                           <label >Guest</label>
                           <div className="input">
-                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" name="guest" value={guest} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}} onChange={e=>onInputchange(e)}/></i>
                           </div>
                           <button>Find a hotel</button>
                       </form>
                   </div>}
                          {myprofession.title==="Car" &&<form>
                               <h1>Car</h1>
-                        <input type="text" />
+                        <input type="text"/>
                         <button>submit</button></form>}
                          {myprofession.title==="Flight" &&<form>
                               <h1>Flight</h1>
