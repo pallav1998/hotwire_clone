@@ -12,9 +12,9 @@ import CloseIcon from "@material-ui/icons/Close";
 import { useStyles } from "./NavBarStyles";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import axios from "axios";
+// import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetails, getStatus } from "../../ReduxStore/action";
+import {  loginUser } from "../../ReduxStore/action";
 
 export const SignIn = () => {
   const [signin, setSignin] = useState(false);
@@ -22,21 +22,16 @@ export const SignIn = () => {
   const [password, setPassword] = useState("");
   const styles = useStyles();
   const dispatch = useDispatch();
-
+   
   useEffect(() => {
-    axios.get("http://localhost:3001/userData").then((res) => {
-      dispatch(getDetails(res.data));
-    });
-  }, [dispatch]);
+  }, []);
 
-  const details = useSelector((state) => state.data);
-
+  // const details = useSelector((state) => state.data);
+  const loginError = useSelector((state) => state.loginError);
+  console.log(loginError,"erroe")
   const handleSignIn = () => {
-    details.forEach((e) => {
-      if (e.Email === email && e.Password === password) {
-        dispatch(getStatus(true));
-      }
-    });
+    dispatch(loginUser({email,password}))
+    
   };
 
   return (
@@ -96,6 +91,7 @@ export const SignIn = () => {
               >
                 Sign In
               </Button>
+              <p style={{color:"red"}}>{loginError?"Wrong Credentials!":""}</p>
               <p>Forgot Password ?</p>
             </Box>
             <hr />

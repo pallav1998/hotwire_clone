@@ -1,10 +1,11 @@
 import React from "react";
-import "./LandingPage.css";
+import styles from "./LandingPage.module.css"
+
 export const Footer = () => {
   return (
     <div>
-      <div className="footer-first">
-        <div className="footer">
+      <div className={styles.footerFirst}>
+        <div className={styles.footer}>
           <div>
             <h3>Travel with Hotwire</h3>
             <p>Deals</p>
@@ -40,7 +41,7 @@ export const Footer = () => {
             <p>Tech Blog</p>
           </div>
         </div>
-        <div className="copyRight">
+        <div className={styles.copyRight}>
           <hr />
           <img
             src="https://ak-secure.hotwirestatic.com/current/static/images/core/partner-logos/expedia_group.svg"

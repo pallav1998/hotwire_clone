@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import "./LandingPage.css";
+import styles from "./LandingPage.module.css"
 import axios from "axios";
 
 export const LandingPage = () => {
@@ -54,8 +54,8 @@ export const LandingPage = () => {
 
   return (
     <>
-      <div classsName="container" style={{ marginTop: "65px" }}>
-        <div className="top-banner">
+      <div className={styles.container} style={{ marginTop: "65px" }}>
+        <div className={styles.topBanner} >
           <span class="title">
             <i class="fab fa-hotjar" style={{ "margin-right": "10px" }}></i>Want
             to stay in an expensive hotel for cheap?
@@ -72,12 +72,12 @@ export const LandingPage = () => {
             </a>
           </span>
         </div>
-        <div className="background-pic">
-          <div className="card">
+        <div className={styles.backgroundPic}>
+          <div className={styles.card}>
             <div style={{ display: "flex", width: "99.8%" }}>
               {profession.map((profession) => (
                 <button
-                  className="cardButton"
+                  className={styles.cardButton}
                   type="button"
                   default
                   key={profession}
@@ -96,11 +96,11 @@ export const LandingPage = () => {
               ))}
             </div>
             {myprofession.title === "Hotel" && (
-              <div className="formLabel">
+              <div className={styles.formLabel}>
                 <form onSubmit={(e) => onsubmit(e)}>
                   <h1 clas="formHeading">Search hotel deals</h1>
                   <label>Destination</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -141,7 +141,7 @@ export const LandingPage = () => {
                   <br />
                   <br />
                   <label>Guest</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-user-alt"
                       aria-hidden="true"
@@ -170,12 +170,12 @@ export const LandingPage = () => {
               </div>
             )}
             {myprofession.title === "Car" && (
-              <div className="formLabel">
+              <div className={styles.formLabel}>
                 <form onSubmit={(e) => onsubmit(e)}>
                   <h1 clas="formHeading">Enter your location</h1>
                   <label>Destination</label>
                   <br />
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -217,7 +217,7 @@ export const LandingPage = () => {
                   />{" "}
                   <br /> <br />
                   <label>Guest</label> <br />
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-user-alt"
                       aria-hidden="true"
@@ -246,11 +246,11 @@ export const LandingPage = () => {
               </div>
             )}
             {myprofession.title === "Flight" && (
-              <div className="formLabel">
+              <div className={styles.formLabel}>
                 <form onSubmit={(e) => onsubmit(e)}>
                   <h1 clas="formHeading">Search hotel deals</h1>
                   <label>Fly from</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -276,7 +276,7 @@ export const LandingPage = () => {
                   </div>{" "}
                   <br />
                   <label>Fly to</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -316,7 +316,7 @@ export const LandingPage = () => {
                   />{" "}
                   <br /> <br />
                   <label>Passengers</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-user-alt"
                       aria-hidden="true"
@@ -345,11 +345,11 @@ export const LandingPage = () => {
               </div>
             )}
             {myprofession.title === "Bundle" && (
-              <div className="formLabel">
+              <div className={styles.formLabel}>
                 <form onSubmit={(e) => onsubmit(e)}>
                   <h1 clas="formHeading">Search hotel deals</h1>
                   <label>Fly from</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -375,7 +375,7 @@ export const LandingPage = () => {
                   </div>{" "}
                   <br />
                   <label>Fly to</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-map-marker-alt"
                       aria-hidden="true"
@@ -429,7 +429,7 @@ export const LandingPage = () => {
                   />
                   <br /> <br />
                   <label>Passengers</label>
-                  <div className="input">
+                  <div className={styles.input}>
                     <i
                       class="fas fa-user-alt"
                       aria-hidden="true"
@@ -459,7 +459,7 @@ export const LandingPage = () => {
             )}
           </div>
 
-          <div className="learn_more">
+          <div className={styles.learn_more}>
             <img
               src="https://tpc.googlesyndication.com/simgad/16159382514288190354?"
               alt="loading"
@@ -467,58 +467,58 @@ export const LandingPage = () => {
             />
             <span style={{ marginTop: "18px", marginRight: "60px" }}>
               Give the world a shot
-              <button className="laernButton">Learn more</button>
+              <button className={styles.laernButton}>Learn more</button>
             </span>
           </div>
         </div>
-        <div className="why-Choose">
+        <div className={styles.whyChoose}>
           <img
             src="https://ak-secure.hotwirestatic.com/current/static/images//shared-experiments/RTB19/uhp-confidence-992@2x.png"
             alt="loading"
           />
         </div>
-        <div className="mobile">
-          <div className="mobileImg">
+        <div className={styles.mobile}>
+          <div className={styles.mobileImg}>
             <img
               src="https://ak-secure.hotwirestatic.com/current/static/images/car/home/app-download-banner/iPhoneXLeft_Copy-2x.png"
               alt="loading"
             />
           </div>
-          <div className="heading">
+          <div className={styles.heading}>
             <h1>Download the free Hotwire app</h1>
             <h3>For faster, easier booking and exclusive deals.</h3>
-            <div className="playstore">
-              <div className="playstore-img">
+            <div className={styles.playstore}>
+              <div className={styles.playstoreImg}>
                 <img
                   src="https://ak-secure.hotwirestatic.com/current/static/images/car/home/app-download-banner/App_button_-_iOS-2x.png"
                   alt="loading"
                 />
               </div>
-              <div className="playstore-img1">
+              <div className={styles.playstoreImg1}>
                 <img
                   src="https://ak-secure.hotwirestatic.com/current/static/images/car/home/app-download-banner/App_button_-_Android-2x.png"
                   alt="loading"
                 />
               </div>
             </div>
-            <p className="ptag">Send a download link to your mobile device</p>
-            <div className="inp">
-              <div className="input">
+            <p className={styles.ptag}>Send a download link to your mobile device</p>
+            <div className={styles.inp}>
+              <div className={styles.input}>
                 <i
                   class="fa fa-mobile"
                   aria-hidden="true"
                   style={{ marginTop: "5px", marginLeft: "10px" }}
                 >
                   <input
-                    className="mobile-Input"
+                    className={styles.mobileInput}
                     type="text"
                     placeholder="ex:207-2074444"
                   />
                 </i>
               </div>
-              <button className="btn">Send me The Link</button>
+              <button className={styles.btn}>Send me The Link</button>
             </div>
-            <p className="para">
+            <p className={styles.para}>
               By providing your number, you agree to receive a one-time
               automated text message with a link to get the app. Our app offers
               promotions and booking services. No purchase necessary. Standard
@@ -526,18 +526,18 @@ export const LandingPage = () => {
             </p>
           </div>
         </div>
-        <div className="email">
+        <div className={styles.email}>
           <div>
             <i class="far fa-envelope"></i>
-            <span className="emailHeading">
+            <span className={styles.emailHeading}>
               {" "}
               Unlock an extra $10 off your next Hot Rate® Hotel when you sign up
               for email!
             </span>
           </div>
-          <div className="emailInput">
+          <div className={styles.emailInput}>
             <input type="text" />{" "}
-            <button className="btn" style={{ marginTop: "-10px" }}>
+            <button className={styles.btn} style={{ marginTop: "-10px" }}>
               Subscribe
             </button>
             <p style={{ fontSize: "11px" }}>
@@ -546,25 +546,25 @@ export const LandingPage = () => {
             </p>
           </div>
         </div>
-        <div className="headings">
-          <h1 className="find">Find 4-Star Hotels at 2-Star Prices</h1>
+        <div className={styles.headings}>
+          <h1 className={styles.find}>Find 4-Star Hotels at 2-Star Prices</h1>
         </div>
-        <div className="grid">
+        <div className={styles.grid}>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/131217-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>42% off</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -574,25 +574,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Atlanta, GA</h2>
-              <del>$238</del> <span className="doller_symbol">$</span>
-              <span className="doller">139</span> <span>/night</span>
+              <del>$238</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="	https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/4869-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>38%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -602,25 +602,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Boston, MA</h2>
-              <del>$198</del> <span className="doller_symbol">$</span>
-              <span className="doller">123</span> <span>/night</span>
+              <del>$198</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>123</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/24239-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>31%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -630,25 +630,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Seatel, WA</h2>
-              <del>$228</del> <span className="doller_symbol">$</span>
-              <span className="doller">159</span> <span>/night</span>
+              <del>$228</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>159</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/23801-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>36%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -658,25 +658,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Nashville, Tn</h2>
-              <del>$185</del> <span className="doller_symbol">$</span>
-              <span className="doller">119</span> <span>/night</span>
+              <del>$185</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>119</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/14657-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>62%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -686,25 +686,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>San Francisco, CA</h2>
-              <del>$435</del> <span className="doller_symbol">$</span>
-              <span className="doller">169</span> <span>/night</span>
+              <del>$435</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>169</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30046-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>32%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -717,25 +717,25 @@ export const LandingPage = () => {
               </h3>
               <p>4-star Hot rate hotel in</p>
               <h2>Chicago, IL</h2>
-              <del>$204</del> <span className="doller_symbol">$</span>
-              <span className="doller">139</span> <span>/night</span>
+              <del>$204</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/6928-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>42%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -745,25 +745,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Montreal, Canada</h2>
-              <del>$238</del> <span className="doller_symbol">$</span>
-              <span className="doller">139</span> <span>/night</span>
+              <del>$238</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30112-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>33%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -773,25 +773,25 @@ export const LandingPage = () => {
               </h3>
               <p>4-star Hot rate hotel in</p>
               <h2>Orlando, FL</h2>
-              <del>$228</del> <span className="doller_symbol">$</span>
-              <span className="doller">154</span> <span>/night</span>
+              <del>$228</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>154</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/15605-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>49%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -801,25 +801,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>TORONTO, CANADA</h2>
-              <del>$278</del> <span className="doller_symbol">$</span>
-              <span className="doller">143</span> <span>/night</span>
+              <del>$278</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>143</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/2764-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>39%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -829,25 +829,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Los Angles, CA</h2>
-              <del>$296</del> <span className="doller_symbol">$</span>
-              <span className="doller">183</span> <span>/night</span>
+              <del>$296</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>183</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30117-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>29%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -857,25 +857,25 @@ export const LandingPage = () => {
               </h3>
               <p>4.5-star Hot rate hotel in</p>
               <h2>Denver, CO</h2>
-              <del>$238</del> <span className="doller_symbol">$</span>
-              <span className="doller">139</span> <span>/night</span>
+              <del>$238</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
           <div>
-            <div className="inner">
+            <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/17211-1x.jpg"
                 alt="loading"
               />
             </div>
-            <div className="bad">
-              <div className="badge"></div>
+            <div className={styles.bad}>
+              <div className={styles.badge}></div>
             </div>
-            <div className="head">
+            <div className={styles.head}>
               <h3>40%</h3>
               <p>off</p>
             </div>
-            <div className="star">
+            <div className={styles.star}>
               <h3>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
                 <i class="fas fa-star" style={{ color: "orange" }}></i>
@@ -885,17 +885,17 @@ export const LandingPage = () => {
               </h3>
               <p>4-star Hot rate hotel in</p>
               <h2>Manhattan, NY</h2>
-              <del>$165</del> <span className="doller_symbol">$</span>
-              <span className="doller">99</span> <span>/night</span>
+              <del>$165</del> <span className={styles.doller_symbol}>$</span>
+              <span className={styles.doller}>99</span> <span>/night</span>
             </div>
           </div>
         </div>
-        <div className="advertisement">
+        <div className={styles.advertisement}>
           <div> </div>
           <p>Advertisements</p>
           <div> </div>
         </div>
-        <div className="ad">
+        <div className={styles.ad}>
           <div>
             <img
               src="https://tpc.googlesyndication.com/simgad/10787181852956966775?"
@@ -915,16 +915,15 @@ export const LandingPage = () => {
             />
           </div>
         </div>
-        <div className="gap">
           <hr />
           <br />
           <br />
           <hr />
         </div>
-        <div className="details">
+        <div className={styles.details}>
           <details>
             <summary>Discover where you can go with Hotwire</summary>
-            <div className="detail">
+            <div className={styles.detail}>
               <h3>Popular Hotel Destinations</h3>
               <a href="#">Las Vegas </a>
               <a href="#">HotelsChicago</a>
@@ -933,7 +932,7 @@ export const LandingPage = () => {
               <a href="#"> HotelsAustin</a>
               <a href="#"> HotelsOrlando</a>
             </div>
-            <div className="detail">
+            <div className={styles.detail}>
               <h3>Popular Hotel Destinations</h3>
               <a href="#">Las Vegas </a>
               <a href="#">HotelsChicago</a>
@@ -942,7 +941,7 @@ export const LandingPage = () => {
               <a href="#"> HotelsAustin</a>
               <a href="#"> HotelsOrlando</a>
             </div>
-            <div className="detail">
+            <div className={styles.detail}>
               <h3>Popular Hotel Destinations</h3>
               <a href="#">Las Vegas </a>
               <a href="#">HotelsChicago</a>
@@ -951,7 +950,7 @@ export const LandingPage = () => {
               <a href="#"> HotelsAustin</a>
               <a href="#"> HotelsOrlando</a>
             </div>
-            <div className="detail">
+            <div className={styles.detail}>
               <h3>Popular Hotel Destinations</h3>
               <a href="#">Las Vegas </a>
               <a href="#">HotelsChicago</a>
@@ -975,7 +974,7 @@ export const LandingPage = () => {
             </p>
           </details>
         </div>
-      </div>
+     
     </>
   );
 };

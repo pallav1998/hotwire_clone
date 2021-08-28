@@ -20,8 +20,7 @@ export const NavBar = () => {
   const [currency, setCurrency] = useState("USD");
   const styles = useStyles();
 
-  const details = useSelector((state) => state.data);
-  console.log("details:", details);
+  const runningUser = useSelector((state) => state.runningUser);
   const status = useSelector((state) => state.Loginstatus);
   console.log("statusRedux:", status);
 
@@ -91,10 +90,7 @@ export const NavBar = () => {
 
               {status ? (
                 <Box className={styles.box2}>
-                  {details.map((e) => {
-                    console.log(e);
-                    return <h6 key={e.id}>Hi, {e.FName}</h6>;
-                  })}
+                  <h6>Hi, {runningUser.FName}</h6>;
                 </Box>
               ) : (
                 <Box className={styles.box2}>
@@ -103,10 +99,7 @@ export const NavBar = () => {
                 </Box>
               )}
 
-              {/* {details.map((e) => {
-                console.log(e);
-                return <h6 key={e.id}>Hi, {e.FName}</h6>;
-              })} */}
+             
             </Grid>
           </Grid>
         </Toolbar>

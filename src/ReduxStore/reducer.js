@@ -1,6 +1,6 @@
-import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS } from "./actionType";
+import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED } from "./actionType";
 
-const initState = { data: [], user: [], Loginstatus: false };
+const initState = { data: [], user: [], Loginstatus: false,runningUser:{},loginError:false };
 
 export const reducerFunction = (state = initState, { type, payload }) => {
   switch (type) {
@@ -20,6 +20,16 @@ export const reducerFunction = (state = initState, { type, payload }) => {
         ...state,
         Loginstatus: payload,
       };
+    case UPDATE_RUNNING_USER:
+      return{
+        ...state,
+        runningUser:payload
+      }
+    case LOGIN_FAILED:
+      return {
+        ...state,
+        loginError:payload
+      }
     default: {
       return state;
     }
