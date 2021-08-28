@@ -398,6 +398,8 @@ width: 150px;
     margin-left: 14%;
     position: absolute;
     justify-content: center;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 .hotel,.car,.flight,.bundle{
     background-color: #f8f9fa;
@@ -514,7 +516,7 @@ justify-content: space-between;
     background-color: #db3939;
     border-color: #db3939;
     color: #fff;
-    box-shadow: none;
+
     box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
         margin-top: 24px;
     padding: 0 16px;
@@ -1295,6 +1297,9 @@ width: 70px;
     justify-content: center;
     margin-left: 0;
          background: white;
+         box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+         border-radius: 2px;
+
 }
 .card>div>button{
     width: 100%;

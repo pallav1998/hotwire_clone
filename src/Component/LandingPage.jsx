@@ -7,6 +7,7 @@ import ApartmentSharpIcon from '@material-ui/icons/ApartmentSharp';
 import FlightIcon from '@material-ui/icons/Flight';
 import axios from 'axios';
 import { HistoryRounded } from '@material-ui/icons';
+import Footer from './Footer';
 
 
 const LandingPage = () => {
@@ -83,11 +84,11 @@ const onsubmit=async e=>{
                           <label>Destination</label>
                           <div className="input" >
                           <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
-                          </div>
+                          </div><br />
                           <label>Checkin</label>    <label >Checkout</label> <br/>
                           <input type="date" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
                       
-                          <input type="date" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/>
+                          <input type="date" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/><br/><br/>
                           <label >Guest</label>
                           <div className="input">
                           <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" name="guest" value={guest} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}} onChange={e=>onInputchange(e)}/></i>
@@ -95,18 +96,75 @@ const onsubmit=async e=>{
                           <button>Find a hotel</button>
                       </form>
                   </div>}
-                         {myprofession.title==="Car" &&<form>
-                              <h1>Car</h1>
-                        <input type="text"/>
-                        <button>submit</button></form>}
-                         {myprofession.title==="Flight" &&<form>
-                              <h1>Flight</h1>
-                        <input type="text" />
-                        <button>submit</button></form>}
-                          {myprofession.title==="Bundle" &&<form>
-                               <h1>Bundle</h1>
-                        <input type="text" />
-                        <button>submit</button></form>}
+                         {myprofession.title==="Car" &&<div className="formLabel">
+                      
+                      <form onSubmit={e=>onsubmit(e)}>
+                          <h1 clas="formHeading">Enter your location</h1>
+                          <label>Destination</label><br/>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div> <br/>
+                          <label>Pick-up date</label>    <label style={{"marginLeft":"40px"}} >Pick-up time</label> <br/> 
+                          <input type="date" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
+                      
+                          <input type="time" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/> <br/> <br/>
+                          <label >Guest</label> <br/>
+                          <div className="input">
+                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" name="guest" value={guest} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}} onChange={e=>onInputchange(e)}/></i>
+                          </div>
+                          <button>Find a Car</button>
+                      </form>
+                  </div>}
+                         {myprofession.title==="Flight" &&<div className="formLabel">
+                      
+                      <form onSubmit={e=>onsubmit(e)}>
+                          <h1 clas="formHeading">Search hotel deals</h1>
+                          <label>Fly from</label>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div> <br/>
+                           <label>Fly to</label>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div><br />
+                          <label>Departing</label>    <label >Returning</label> <br/>
+                          <input type="date" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
+                      
+                          <input type="date" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/> <br/> <br/>
+                          <label >Passengers</label>
+                          <div className="input">
+                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" name="guest" value={guest} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}} onChange={e=>onInputchange(e)}/></i>
+                          </div>
+                          <button>Find a Flight</button>
+                      </form>
+                  </div>}
+                          {myprofession.title==="Bundle" &&<div className="formLabel">
+                      
+                      <form onSubmit={e=>onsubmit(e)}>
+                          <h1 clas="formHeading">Search hotel deals</h1>
+                          <label>Fly from</label>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div> <br/>
+                           <label>Fly to</label>
+                          <div className="input" >
+                          <i class="fas fa-map-marker-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text"  name="destination" value={destination} onChange={e=>onInputchange(e)} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}}/></i>
+                          </div> <br/>
+                          <label>Departing</label>    <label style={{"marginLeft":"70px"}}>Returning</label> <br/>
+                          <input type="date" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
+                      
+                          <input type="date" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/> <br/> <br/>
+                          <input type="time" name="checkin" value={checkin} onChange={e=>onInputchange(e)} />
+                      
+                          <input type="time" name="checkout" value={checkout} onChange={e=>onInputchange(e)}/>
+                           <br/> <br/>
+                          <label >Passengers</label>
+                          <div className="input">
+                          <i class="fas fa-user-alt" aria-hidden="true"  style={{"marginTop":"2px","marginLeft":"10px"}}><input  type="text" name="guest" value={guest} placeholder="ex:207-2074444"style={{"border":"none","background":"none","font-size":"20px","outline":"none","marginLeft":"20px","marginTop":"5px" ,"paddingBottom":"5px"}} onChange={e=>onInputchange(e)}/></i>
+                          </div>
+                          <button>Find a Deal</button>
+                      </form>
+                  </div>}
                 </div>
                
                
@@ -482,49 +540,7 @@ const onsubmit=async e=>{
                          <p style={{"fontSize":"x-small"}}>Whether you're looking for awesome hotel deals at your favorite travel sites, unsold rooms, or a wallet-friendly rate that fits your budget, Hotwire offers more than 173,000 hotels throughout North America, Europe, Latin America and Asia. And if you're looking for cheap hotels, or one that's located in your desired destination, Hotwire has just what you're looking for as your go-to source among travel sites. Need help with booking last-minute travel and destinations on your vacation wish list? We've built a killer mobile app and supereasy planning tools that allow you to search and find last minute travel deals!</p>
                </details>
            </div>
-           <div className="footer-first">
-           <div className="footer">
-               <div><h3>Travel with Hotwire</h3>
-               <p>Deals</p>
-               <p>Hotels</p>
-               <p>Cars</p>
-               <p>Flights</p>
-               <p>Vacations</p>
-               <p>Mobile app</p></div>
-               <div>
-                   <h3>Get to know Hotwire</h3>
-                    <p>About us</p>
-               <p>Careers</p>
-               <p>Press Room</p>
-               <p>Site map</p>
-               <p>Privacy</p>
-               <p>Terms of use</p>
-               <p>Blog</p>
-               </div>
-               <div>
-                <h3>Customer service</h3>
-                <p>Contact us</p>
-               <p>Help center</p>
-               <p>Feedback</p>
-               <p>Manage subscriptions</p>
-               <p>Do Not Sell My Personal Information</p>
-               </div>
-               <div>
-               <h3>Partner with Hotwire</h3>
-                <p>Affiliates</p>
-               <p>Suppliers</p>
-               <p>Advertisers</p>
-               <p>Tech Blog</p>
-               </div>
-              
-           
-           </div>
-           <div className="copyRight">
-               <hr />
-               <img src="https://ak-secure.hotwirestatic.com/current/static/images/core/partner-logos/expedia_group.svg" alt="loading" />
-               <p>© 2021 Hotwire, Inc., an Expedia Group company. All rights reserved. Hotwire, Inc. is not responsible for content on external sites. Hotwire, the Hotwire logo, Hot Rate, and "4-star hotels. 2-star prices." are either registered trademarks or trademarks of Hotwire, Inc. in the US and/or other countries. Other logos or product and company names mentioned herein may be the property of their respective owners. CST 2053390-50; NST 20003-0209.</p>
-           </div>
-           </div>
+           <Footer/>
         </div>
         </>
     )
