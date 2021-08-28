@@ -2,47 +2,44 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles({
   flex: {
-    display: "flex",
-    flexDirection: "row",
+    // border: "2px solid blue",
+  },
+  navbar: {
+    position: "fixed",
+    color: "black",
+    backgroundColor: "white",
+    minHeight: "60px",
   },
 
   box1: {
     display: "flex",
-    flexDirection: "row",
+    // justifyContent: "flex-start",
+    // border: "1px solid black",
     marginRight: "30vw",
-    // flexGrow: "1",
-    marginTop: "25px",
     "&>h6": {
-      margin: "0 14px",
+      margin: "5px 14px",
       fontSize: "16px",
     },
     "&>img": {
       width: "120px",
-      height: "55px",
+      height: "30px",
     },
   },
 
   box2: {
     display: "flex",
-    flexDirection: "row",
-    // flexGrow: "1",
-    marginTop: "25px",
+    justifyContent: "flex-end",
+    // border: "1px solid black",
     "&>div": {
       margin: "0 14px",
-      fontSize: "16px",
+      fontSize: "15px",
     },
     "&>h6": {
-      margin: "0 16px",
-      fontSize: "16px",
+      fontSize: "15px",
+      width: "105px",
     },
   },
 
-  navbar: {
-    position: "fixed",
-    color: "black",
-    backgroundColor: "white",
-    height: "60px",
-  },
   icon: {
     marginTop: "6px",
     display: "flex",
