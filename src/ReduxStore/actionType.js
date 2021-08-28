@@ -1,0 +1,5 @@
+export const GETDETAILS = "GETDETAILS";
+
+export const ADDUSERDETAILS = "ADDUSERDETAILS";
+
+export const LOGINSTATUS = "LOGINSTATUS";

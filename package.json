@@ -1,10 +1,11 @@
 {
-  "name": "hotwire",
+  "name": "hotwire_clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -12,8 +13,20 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
+=======
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "nanoid": "^3.1.25",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.4",
+>>>>>>> 4158e90ab22e1c2c9c1c479157cb4ed912ee023d
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "redux": "^4.1.1",
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
