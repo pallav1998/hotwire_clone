@@ -6,6 +6,7 @@ import { NavBar } from './Components/NavBar';
 function App() {
   return (
     <div>
+      {/* <LandingPage/> */}
       <NavBar/>
       {/* <Payment/> */}
     </div>
