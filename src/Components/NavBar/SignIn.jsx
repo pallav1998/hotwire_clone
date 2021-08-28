@@ -14,7 +14,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 // import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import {  loginUser } from "../../ReduxStore/action";
+import { loginUser } from "../../ReduxStore/action";
 
 export const SignIn = () => {
   const [signin, setSignin] = useState(false);
@@ -22,16 +22,14 @@ export const SignIn = () => {
   const [password, setPassword] = useState("");
   const styles = useStyles();
   const dispatch = useDispatch();
-   
-  useEffect(() => {
-  }, []);
+
+  useEffect(() => {}, []);
 
   // const details = useSelector((state) => state.data);
   const loginError = useSelector((state) => state.loginError);
-  console.log(loginError,"erroe")
+  console.log(loginError, "erroe");
   const handleSignIn = () => {
-    dispatch(loginUser({email,password}))
-    
+    dispatch(loginUser({ email, password }));
   };
 
   return (
@@ -91,7 +89,9 @@ export const SignIn = () => {
               >
                 Sign In
               </Button>
-              <p style={{color:"red"}}>{loginError?"Wrong Credentials!":""}</p>
+              <p style={{ color: "red" }}>
+                {loginError ? "Wrong Credentials!" : ""}
+              </p>
               <p>Forgot Password ?</p>
             </Box>
             <hr />

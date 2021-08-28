@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./LandingPage.module.css"
+import styles from "./LandingPage.module.css";
 
 export const Footer = () => {
   return (

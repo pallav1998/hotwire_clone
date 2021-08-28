@@ -16,6 +16,7 @@ import { nanoid } from "nanoid";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getUsers } from "../../ReduxStore/action";
+import { NavLink } from "react-router-dom";
 
 export const SignUp = () => {
   const [signup, setSignup] = useState(false);
@@ -136,6 +137,15 @@ export const SignUp = () => {
               <hr />
               <Box className={styles.SignInBox6}>
                 <p>Don't have an Account?</p>
+                {/* <NavLink to={"/SignIn"}>
+                  <Button
+                    className={styles.button1}
+                    variant="contained"
+                    color="primary"
+                  >
+                    Create One
+                  </Button>
+                </NavLink> */}
                 <Button
                   className={styles.button1}
                   variant="contained"

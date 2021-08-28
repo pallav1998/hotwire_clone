@@ -76,39 +76,38 @@ export const useStyles = makeStyles({
   //modal
   modal: {
     background: "white",
-    marginTop: "100px",
+    marginTop: "12vh",
     margin: "auto",
     padding: "2rem",
-    width: "360px",
-    height: "500px",
+    width: "23vw",
+    height: "550px",
   },
 
   //SignIn Modal
   SignInBox1: {
     display: "flex",
-    flexDirection: "row",
     marginTop: "-30px",
     marginLeft: "-30px",
     boxShadow: "0 1px 15px 0 cyan",
-    width: "420px",
+    width: "26.8vw",
     height: "50px",
 
     "&>h6": {
       marginTop: "8px",
-      marginLeft: "25px",
+      marginLeft: "24px",
     },
 
     "&>svg": {
       marginTop: "14px",
-      marginLeft: "17vw",
+      marginLeft: "18vw",
       cursor: "pointer",
     },
   },
   SignInBox2: {
     marginTop: "25px",
-    width: "380px",
+    width: "26.8vw",
     "&>button": {
-      width: "155px",
+      width: "9.5vw",
       height: "45px",
       margin: "0 16px",
     },
@@ -130,16 +129,17 @@ export const useStyles = makeStyles({
   },
 
   SignInBox3: {
-    marginBottom: "20px",
+    marginBottom: "15px",
     "&>div": {
-      width: "360px",
+      width: "23vw",
       margin: "10px 0",
     },
   },
 
   SignInBox4: {
     display: "flex",
-    marginTop: "-10px",
+    marginTop: "-25px",
+    marginBottom: "30px",
   },
 
   SignInBox5: {
@@ -147,7 +147,7 @@ export const useStyles = makeStyles({
     textAlign: "center",
     lineHeight: "0px",
     "&>button": {
-      width: "360px",
+      width: "22vw",
       height: "50px",
       marginTop: "20px",
       fontSize: "20px",
@@ -163,7 +163,7 @@ export const useStyles = makeStyles({
     display: "flex",
     // lineHeight: "0px",
     "&>button": {
-      width: "100px",
+      width: "7vw",
       height: "40px",
       marginTop: "10px",
       fontSize: "10px",
@@ -175,11 +175,11 @@ export const useStyles = makeStyles({
 
   modal1: {
     background: "white",
-    marginTop: "75px",
+    marginTop: "50px",
     margin: "auto",
     padding: "2rem",
-    width: "360px",
-    height: "580px",
+    width: "23vw",
+    height: "610px",
   },
 
   SignUpBox1: {
@@ -187,7 +187,7 @@ export const useStyles = makeStyles({
     flexDirection: "row",
     margin: "-30px 0 10px -30px",
     boxShadow: "0 1px 15px 0 cyan",
-    width: "420px",
+    width: "26.8vw",
     height: "50px",
     "&>h6": {
       marginTop: "8px",
@@ -196,7 +196,7 @@ export const useStyles = makeStyles({
 
     "&>svg": {
       marginTop: "14px",
-      marginLeft: "10vw",
+      marginLeft: "12vw",
       cursor: "pointer",
     },
   },
@@ -204,7 +204,7 @@ export const useStyles = makeStyles({
   SignUpBox2: {
     margin: "0px",
     height: "400px",
-    width: "400px",
+    width: "25vw",
     marginBottom: "20px",
     marginLeft: "-15px",
     // border: "2px solid black",
@@ -213,11 +213,17 @@ export const useStyles = makeStyles({
 
   SignUpBox3: {
     fontSize: "14px",
-    lineHeight: "0px",
+    "&>p": {
+      lineHeight: "0px",
+      marginBottom: "-5px",
+    },
   },
 
   SignUpBox4: {
     fontSize: "12px",
     lineHeight: "14px",
+    "&>p": {
+      lineHeight: "15px",
+    },
   },
 });

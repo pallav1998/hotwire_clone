@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import styles from "./LandingPage.module.css"
+import styles from "./LandingPage.module.css";
 import axios from "axios";
 
 export const LandingPage = () => {
@@ -49,13 +49,13 @@ export const LandingPage = () => {
   const onsubmit = async (e) => {
     e.preventDefault();
     await axios.put("http://localhost:3001/search", user);
-    // ******************************  use HistoryRounded.push*
+    // *********************************************use HistoryRounded.push*************************************************************
   };
 
   return (
     <>
       <div className={styles.container} style={{ marginTop: "65px" }}>
-        <div className={styles.topBanner} >
+        <div className={styles.topBanner}>
           <span class="title">
             <i class="fab fa-hotjar" style={{ "margin-right": "10px" }}></i>Want
             to stay in an expensive hotel for cheap?
@@ -501,7 +501,9 @@ export const LandingPage = () => {
                 />
               </div>
             </div>
-            <p className={styles.ptag}>Send a download link to your mobile device</p>
+            <p className={styles.ptag}>
+              Send a download link to your mobile device
+            </p>
             <div className={styles.inp}>
               <div className={styles.input}>
                 <i
@@ -915,66 +917,65 @@ export const LandingPage = () => {
             />
           </div>
         </div>
-          <hr />
-          <br />
-          <br />
-          <hr />
-        </div>
-        <div className={styles.details}>
-          <details>
-            <summary>Discover where you can go with Hotwire</summary>
-            <div className={styles.detail}>
-              <h3>Popular Hotel Destinations</h3>
-              <a href="#">Las Vegas </a>
-              <a href="#">HotelsChicago</a>
-              <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
-              <a href="#"> HotelsAtlanta</a>
-              <a href="#"> HotelsAustin</a>
-              <a href="#"> HotelsOrlando</a>
-            </div>
-            <div className={styles.detail}>
-              <h3>Popular Hotel Destinations</h3>
-              <a href="#">Las Vegas </a>
-              <a href="#">HotelsChicago</a>
-              <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
-              <a href="#"> HotelsAtlanta</a>
-              <a href="#"> HotelsAustin</a>
-              <a href="#"> HotelsOrlando</a>
-            </div>
-            <div className={styles.detail}>
-              <h3>Popular Hotel Destinations</h3>
-              <a href="#">Las Vegas </a>
-              <a href="#">HotelsChicago</a>
-              <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
-              <a href="#"> HotelsAtlanta</a>
-              <a href="#"> HotelsAustin</a>
-              <a href="#"> HotelsOrlando</a>
-            </div>
-            <div className={styles.detail}>
-              <h3>Popular Hotel Destinations</h3>
-              <a href="#">Las Vegas </a>
-              <a href="#">HotelsChicago</a>
-              <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
-              <a href="#"> HotelsAtlanta</a>
-              <a href="#"> HotelsAustin</a>
-              <a href="#"> HotelsOrlando</a>
-            </div>
-            <h4>Find 4-Star Hotels at 2-Star Prices</h4>
-            <p style={{ fontSize: "x-small" }}>
-              Whether you're looking for awesome hotel deals at your favorite
-              travel sites, unsold rooms, or a wallet-friendly rate that fits
-              your budget, Hotwire offers more than 173,000 hotels throughout
-              North America, Europe, Latin America and Asia. And if you're
-              looking for cheap hotels, or one that's located in your desired
-              destination, Hotwire has just what you're looking for as your
-              go-to source among travel sites. Need help with booking
-              last-minute travel and destinations on your vacation wish list?
-              We've built a killer mobile app and supereasy planning tools that
-              allow you to search and find last minute travel deals!
-            </p>
-          </details>
-        </div>
-     
+        <hr />
+        <br />
+        <br />
+        <hr />
+      </div>
+      <div className={styles.details}>
+        <details>
+          <summary>Discover where you can go with Hotwire</summary>
+          <div className={styles.detail}>
+            <h3>Popular Hotel Destinations</h3>
+            <a href="#">Las Vegas </a>
+            <a href="#">HotelsChicago</a>
+            <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
+            <a href="#"> HotelsAtlanta</a>
+            <a href="#"> HotelsAustin</a>
+            <a href="#"> HotelsOrlando</a>
+          </div>
+          <div className={styles.detail}>
+            <h3>Popular Hotel Destinations</h3>
+            <a href="#">Las Vegas </a>
+            <a href="#">HotelsChicago</a>
+            <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
+            <a href="#"> HotelsAtlanta</a>
+            <a href="#"> HotelsAustin</a>
+            <a href="#"> HotelsOrlando</a>
+          </div>
+          <div className={styles.detail}>
+            <h3>Popular Hotel Destinations</h3>
+            <a href="#">Las Vegas </a>
+            <a href="#">HotelsChicago</a>
+            <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
+            <a href="#"> HotelsAtlanta</a>
+            <a href="#"> HotelsAustin</a>
+            <a href="#"> HotelsOrlando</a>
+          </div>
+          <div className={styles.detail}>
+            <h3>Popular Hotel Destinations</h3>
+            <a href="#">Las Vegas </a>
+            <a href="#">HotelsChicago</a>
+            <a href="#">HotelsSan Diego</a> <a href="#">HotelsDenver</a>
+            <a href="#"> HotelsAtlanta</a>
+            <a href="#"> HotelsAustin</a>
+            <a href="#"> HotelsOrlando</a>
+          </div>
+          <h4>Find 4-Star Hotels at 2-Star Prices</h4>
+          <p style={{ fontSize: "x-small" }}>
+            Whether you're looking for awesome hotel deals at your favorite
+            travel sites, unsold rooms, or a wallet-friendly rate that fits your
+            budget, Hotwire offers more than 173,000 hotels throughout North
+            America, Europe, Latin America and Asia. And if you're looking for
+            cheap hotels, or one that's located in your desired destination,
+            Hotwire has just what you're looking for as your go-to source among
+            travel sites. Need help with booking last-minute travel and
+            destinations on your vacation wish list? We've built a killer mobile
+            app and supereasy planning tools that allow you to search and find
+            last minute travel deals!
+          </p>
+        </details>
+      </div>
     </>
   );
 };

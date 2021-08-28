@@ -4,7 +4,10 @@ import { Payment } from "./Components/Payment/Payment";
 import { LandingPage } from "./Components/Landingpage/LandingPage";
 import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Landingpage/Footer";
-import {HotelResult} from "./Components/Hotel_Ind_Page/HotelResult"
+import { HotelResult } from "./Components/Hotel_Ind_Page/HotelResult";
+import { SignIn } from "./Components/NavBar/SignIn";
+import { SignUp } from "./Components/NavBar/SignUp";
+
 function App() {
   return (
     <div>
@@ -12,17 +15,22 @@ function App() {
       <Switch>
         <Route exact path="/">
           <LandingPage />
-        </Route>      
+        </Route>
         <Route path="/payment">
           <Payment />
         </Route>
         <Route path="/hotelResult">
-          <HotelResult/>
+          <HotelResult />
+        </Route>
+        <Route path="/SignIn">
+          <SignIn />
+        </Route>
+        <Route path="/SignUp">
+          <SignUp />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
-
   );
 }
 
