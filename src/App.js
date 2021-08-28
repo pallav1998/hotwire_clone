@@ -1,25 +1,27 @@
-<<<<<<< HEAD
-import './App.css';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import LandingPage from './Component/LandingPage';
-function App() {
-  return (
- <>
- <LandingPage/>
- </>
-=======
-
-import './App.css';
-import { NavBar } from './Components/NavBar';
-// import { Payment } from './Payment/Payment';
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import { Payment } from "./Components/Payment/Payment";
+import { LandingPage } from "./Components/Landingpage/LandingPage";
+import { NavBar } from "./Components/NavBar/NavBar";
+import { Footer } from "./Components/Landingpage/Footer";
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      {/* <Payment/> */}
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/payment">
+          <Payment />
+        </Route>
+      </Switch>
+      <Footer/>
     </div>
->>>>>>> 4158e90ab22e1c2c9c1c479157cb4ed912ee023d
+
   );
 }
 
