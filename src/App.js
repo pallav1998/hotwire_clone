@@ -1,11 +1,13 @@
 
 import './App.css';
 import { NavBar } from './Components/NavBar';
+// import { Payment } from './Payment/Payment';
 
 function App() {
   return (
     <div>
       <NavBar/>
+      {/* <Payment/> */}
     </div>
   );
 }

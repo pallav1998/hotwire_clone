@@ -14,12 +14,11 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetails } from "../ReduxStore/action";
+import { getDetails, getStatus } from "../ReduxStore/action";
 
 export const SignIn = () => {
   const [signin, setSignin] = useState(false);
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState(false);
   const [password, setPassword] = useState("");
   const styles = useStyles();
   const dispatch = useDispatch();
@@ -33,13 +32,11 @@ export const SignIn = () => {
   const details = useSelector((state) => state.data);
 
   const handleSignIn = () => {
-    // console.log("details:", details);
     details.forEach((e) => {
       if (e.Email === email && e.Password === password) {
-        setStatus(true);
+        dispatch(getStatus(true));
       }
     });
-    console.log("status:", status);
   };
 
   return (
