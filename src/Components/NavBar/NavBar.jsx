@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Grid,
   MenuItem,
@@ -13,18 +14,22 @@ import { useState } from "react";
 import { useStyles } from "./NavBarStyles";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { logOutUser } from "../../ReduxStore/action";
 
 export const NavBar = () => {
   const [support, setSupport] = useState("Feedback");
   const [currency, setCurrency] = useState("USD");
   const styles = useStyles();
-
+  const dispatch=useDispatch()
   const runningUser = useSelector((state) => state.runningUser);
   const status = useSelector((state) => state.Loginstatus);
   console.log("statusRedux:", status);
-
+ function signout(){
+  
+   dispatch(logOutUser("logout"))
+ }
   return (
     <Container maxWidth="sm">
       <AppBar className={styles.navbar}>
@@ -91,7 +96,8 @@ export const NavBar = () => {
 
               {status ? (
                 <Box className={styles.box2}>
-                  <h6>Hi, {runningUser.FName}</h6>;
+                  <Button>Hi, {runningUser.FName}</Button>
+                  <Button  className={styles.button2} onClick={()=>signout()}>Sign Out</Button>
                 </Box>
               ) : (
                 <Box className={styles.box2}>

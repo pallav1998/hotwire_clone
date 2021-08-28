@@ -23,7 +23,9 @@ export const SignIn = () => {
   const styles = useStyles();
   const dispatch = useDispatch();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    
+  }, []);
 
   // const details = useSelector((state) => state.data);
   const loginError = useSelector((state) => state.loginError);

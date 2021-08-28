@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED } from "./actionType";
+import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED, LOGOUT_USER } from "./actionType";
 
 export const getDetails = (payload) => {
   return {
@@ -40,11 +40,18 @@ export const loginUser=({email,password})=>{
       }
     })
     .catch((err)=>{
-
+      console.log(err)
     })
   }
 }
 
+export const logOutUser=(payload)=>{
+  // console.log("action kjbbbk")
+  return {
+    type:LOGOUT_USER,
+    payload
+  }
+}
 export const loginFailed=(payload)=>{
   return{
     type:LOGIN_FAILED,
