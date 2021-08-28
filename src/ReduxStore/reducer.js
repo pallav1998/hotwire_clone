@@ -1,4 +1,4 @@
-import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED } from "./actionType";
+import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED, LOGOUT_USER } from "./actionType";
 
 const initState = { data: [], user: [], Loginstatus: false,runningUser:{},loginError:false };
 
@@ -29,6 +29,14 @@ export const reducerFunction = (state = initState, { type, payload }) => {
       return {
         ...state,
         loginError:payload
+      }
+    case LOGOUT_USER:
+      console.log("logout user reducer")
+      return {
+        ...state,
+        Loginstatus:false,
+        runningUser:{},
+        data:[]
       }
     default: {
       return state;
