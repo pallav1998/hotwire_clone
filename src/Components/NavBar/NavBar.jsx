@@ -14,7 +14,6 @@ import { useStyles } from "./NavBarStyles";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   const [support, setSupport] = useState("Feedback");
@@ -95,12 +94,6 @@ export const NavBar = () => {
                 </Box>
               ) : (
                 <Box className={styles.box2}>
-                  {/* <NavLink to={"/signIn"}>
-                    <SignIn />
-                  </NavLink>
-                  <NavLink to={"/signUp"}>
-                    <SignUp />
-                  </NavLink> */}
                   <SignIn />
                   <SignUp />
                 </Box>

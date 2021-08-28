@@ -1,6 +1,8 @@
 import { Box, TextField } from "@material-ui/core";
 import { useStyles } from "./PaymentStyles";
 import { FaUser, FaLock } from "react-icons/fa";
+import { BsDot } from "react-icons/bs";
+import { AiFillTags } from "react-icons/ai";
 
 export const Payment = () => {
   const styles = useStyles();
@@ -177,7 +179,7 @@ export const Payment = () => {
             </Box>
           </Box>
           <hr />
-          <Box>
+          <Box className={styles.ReviewPolicies}>
             <p style={{ fontSize: "20px" }}>Review policies</p>
             <p
               style={{
@@ -191,9 +193,58 @@ export const Payment = () => {
               Hotwire's Rules and Restrictions , Terms of Use and Privacy
               Policy.
             </p>
+            <Box>
+              <Box>
+                <button>Book Now</button>
+                <div>
+                  <div>
+                    <p>Check-In</p>
+                    <h3>Fri-Aug 27</h3>
+                  </div>
+                  <div>
+                    <p>Check-In</p>
+                    <h3>Sat-Aug 28</h3>
+                  </div>
+                </div>
+              </Box>
+              <Box>
+                <p>
+                  <BsDot /> All bookings are final (no refunds, no changes)
+                </p>
+                <p>
+                  <BsDot /> We'll bill your account the full amount now.
+                </p>
+                <p>
+                  <BsDot /> You pay the hotel directly for charges like room
+                  service or resort fees.
+                </p>
+                <p>
+                  <BsDot /> You'll find out the hotel's name after booking.
+                </p>
+                <p>
+                  <BsDot /> The hotel requires a credit card at check-in. They
+                  may not take debit cards.
+                </p>
+              </Box>
+            </Box>
+            <Box>
+              <p>
+                <AiFillTags /> Low price guarantee
+              </p>
+              <h4>You will be charged a total of AUD42.73</h4>
+              <p>(Including taxes and fees)</p>
+              <p>
+                *Savings based on lowest published rate we've found on leading
+                retail travel sites in the last 24-48 hours for the same
+                neighborhood, hotel class, and stay dates.
+              </p>
+            </Box>
           </Box>
         </Box>
         <Box className={styles.box2}></Box>
+      </Box>
+      <Box className={styles.RefNo}>
+        <p>Customer service reference number: 6335564271</p>
       </Box>
     </Box>
   );

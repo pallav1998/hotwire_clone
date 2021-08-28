@@ -115,7 +115,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -155,7 +155,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -190,7 +190,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -231,7 +231,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -265,7 +265,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -291,7 +291,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -313,7 +313,7 @@ export const LandingPage = () => {
                     name="checkout"
                     value={checkout}
                     onChange={(e) => onInputchange(e)}
-                  />{" "}
+                  />
                   <br /> <br />
                   <label>Passengers</label>
                   <div className={styles.input}>
@@ -330,7 +330,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -364,7 +364,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -390,7 +390,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -443,7 +443,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
