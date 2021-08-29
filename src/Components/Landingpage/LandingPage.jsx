@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import styles from "./LandingPage.module.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { useRef } from "react";
 
 export const LandingPage = () => {
   const history=useHistory()
+  const hotelButton=useRef()
+  const hotelButtondummy=useRef()
   const profession = [
     {
       title: "Hotel",
@@ -41,7 +44,10 @@ export const LandingPage = () => {
     checkout: "",
     guest: "",
   });
-
+  // useEffect(()=>{
+  //   hotelButton.current.click()
+  //   // console.log(hotelButton.current,'hotel buyggchh')
+  // },[])
   const { destination, checkin, checkout, guest } = user;
   const onInputchange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -102,11 +108,12 @@ export const LandingPage = () => {
         <div className={styles.backgroundPic}>
           <div className={styles.card}>
             <div style={{ display: "flex", width: "99.8%" }}>
-              {profession.map((profession) => (
+            {profession.map((profession,ind) => (
                 <button
                   className={styles.cardButton}
                   type="button"
                   default
+                  ref={ind===0?hotelButton:hotelButtondummy}
                   key={profession}
                   onClick={() => setMyprofession(profession)}
                 >

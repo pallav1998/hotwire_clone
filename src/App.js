@@ -5,8 +5,8 @@ import { LandingPage } from "./Components/Landingpage/LandingPage";
 import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Landingpage/Footer";
 import { HotelResult } from "./Components/Hotel_Ind_Page/HotelResult";
-import { SignIn } from "./Components/NavBar/SignIn";
-import { SignUp } from "./Components/NavBar/SignUp";
+// import { SignIn } from "./Components/NavBar/SignIn";
+// import { SignUp } from "./Components/NavBar/SignUp";
 import SearchHotel from "./Components/Searchedhotel/SearchedHotel";
 
 function App() {

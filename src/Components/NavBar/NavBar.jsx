@@ -16,7 +16,7 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { logOutUser } from "../../ReduxStore/action";
 
 export const NavBar = () => {

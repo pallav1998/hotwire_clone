@@ -14,7 +14,7 @@ import HearingIcon from "@material-ui/icons/Hearing";
 import PetsIcon from "@material-ui/icons/Pets";
 import Grid from "@material-ui/core/Grid";
 import Rating from "@material-ui/lab/Rating";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect,useRef, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
