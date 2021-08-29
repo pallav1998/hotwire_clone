@@ -14,8 +14,9 @@ import { useState } from "react";
 import { useStyles } from "./NavBarStyles";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux"
+import { useDispatch } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
 import { logOutUser } from "../../ReduxStore/action";
 
 export const NavBar = () => {
@@ -42,7 +43,7 @@ export const NavBar = () => {
             className={styles.flex}
           >
             <Grid item className={styles.box1}>
-              <img className={styles.image} src="Logo.png" alt="Logo" />
+              <Link to="/"> <img className={styles.image} src="Logo.png" alt="Logo"  height="20" style={{marginTop:"7px"}} /> </Link>
               <Typography variant="h6">Hotels</Typography>
               <Typography variant="h6">Cars</Typography>
               <Typography variant="h6">Flight</Typography>
@@ -101,12 +102,6 @@ export const NavBar = () => {
                 </Box>
               ) : (
                 <Box className={styles.box2}>
-                  {/* <NavLink to={"/signIn"}>
-                    <SignIn />
-                  </NavLink>
-                  <NavLink to={"/signUp"}>
-                    <SignUp />
-                  </NavLink> */}
                   <SignIn />
                   <SignUp />
                 </Box>

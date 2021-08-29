@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import styles from "./LandingPage.module.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export const LandingPage = () => {
+  const history=useHistory()
   const profession = [
     {
       title: "Hotel",
@@ -48,8 +50,10 @@ export const LandingPage = () => {
   // ***********************************************use HistoryRounded.push************************************************
   const onsubmit =  (e) => {
     e.preventDefault();
-     axios.put("http://localhost:3001/search", user)
+    const payload={...user,country:"USA"}
+     axios.put("http://localhost:3001/search", payload)
      .then((res)=>{
+      history.push("/searchHotel")
     })
     .catch((err)=>{
       console.log(err)
@@ -67,7 +71,7 @@ export const LandingPage = () => {
 
     axios.put("http://localhost:3001/search", payload)
     .then((res)=>{
-
+      history.push("/searchHotel")
     })
     .catch((err)=>{
       console.log(err)
@@ -138,7 +142,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -178,7 +182,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -213,7 +217,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -254,7 +258,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -288,7 +292,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -314,7 +318,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -336,7 +340,7 @@ export const LandingPage = () => {
                     name="checkout"
                     value={checkout}
                     onChange={(e) => onInputchange(e)}
-                  />{" "}
+                  />
                   <br /> <br />
                   <label>Passengers</label>
                   <div className={styles.input}>
@@ -353,7 +357,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -387,7 +391,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -413,7 +417,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",
@@ -466,7 +470,7 @@ export const LandingPage = () => {
                         style={{
                           border: "none",
                           background: "none",
-                          "font-size": "20px",
+                          fontSize: "20px",
                           outline: "none",
                           marginLeft: "20px",
                           marginTop: "5px",

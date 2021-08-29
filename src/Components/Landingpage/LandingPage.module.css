@@ -246,13 +246,12 @@
 .footer > div {
   width: 25%;
   font-size: 14px;
-
   color: #2a2e3b;
 }
 .footerFirst {
   width: 100%;
   margin: 0 auto;
-  background: #f8f9fa;
+  background: #f0f0f0;
   font-size: 14px;
   z-index: 20;
   color: #2a2e3b;
@@ -268,6 +267,7 @@
 }
 .footer > div > p {
   margin-top: 5px;
+  line-height: 10px;
 }
 .footer > div > h3 {
   margin-top: 25px;
@@ -352,14 +352,15 @@
 .card {
   /* display: flex; */
   width: 300px;
-  height: 500px;
+  height: auto;
   background-color: white;
   margin-top: 2%;
   margin-left: 14%;
   position: absolute;
   justify-content: center;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .hotel,
 .car,

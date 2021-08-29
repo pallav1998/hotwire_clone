@@ -19,6 +19,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import ShowChartIcon from "@material-ui/icons/ShowChart";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   cont2: {
@@ -42,15 +43,11 @@ export function HotelResult() {
   const [positionFixed, setPositionFixed] = useState(["relative", "-80px"]);
   const scrollHeight = useRef(["relative", 0]);
   const classes = useStyles();
-
+  const history=useHistory()
   const today = new Date(Date.now()).toDateString();
 
-  const ratinghotel = useMemo(() => {
-    return Math.floor(Math.random() * 2 + 3);
-  }, []);
-  const price = useMemo(() => {
-    return Math.floor(Math.random() * 70 + 90);
-  }, []);
+  const ratinghotel =resultData.starRating
+  const [price,setPrice] =useState(0)
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     getData();
@@ -58,21 +55,34 @@ export function HotelResult() {
   function handleScroll(e) {
     // scrollHeight.current=window.pageYOffset
     if (window.pageYOffset > 246) {
-      console.log(scrollHeight, "scroll height", "hello");
+      // console.log(scrollHeight, "scroll height", "hello");
       console.log(window.pageYOffset);
-      setPositionFixed(["fixed", "0px"]);
-      scrollHeight.current = ["fixed", "50px"];
-    } else {
+      setPositionFixed(["fixed", "60px"]);
+      scrollHeight.current = ["fixed", "115px"];
+    }
+    else{
       setPositionFixed(["relative", "-80px"]);
     }
   }
-  async function getData() {
+  function getData(){
+    axios.get("http://localhost:3001/hotelsearch")
+    .then(({data})=>{
+      getData1(data.hotelId)
+    })
+    .catch((err)=>{
+      setIsloading(false)
+      setIserror(true)
+    })
+  }
+  async function getData1(id) {
     try {
       let { data } = await axios.get(
-        "http://localhost:3001/data?hotelId=3faf8507-307f-4846-936c-a1465b3cfc42"
+        `http://localhost:3001/data?hotelId=${id}`
       );
-      console.log(data[0]);
+      console.log(data,"jajajna");
       setImages(data[0].images);
+      let f=((data[0].location.latitude) % Math.abs(data[0].location.longitude)).toFixed(2)
+      setPrice(f)
       setResultData(data[0]);
       setIsloading(false);
     } catch (error) {
@@ -81,13 +91,11 @@ export function HotelResult() {
     }
   }
   //242.13333129882812
-  if (isloading) {
-    return <h4>loading...</h4>;
-  }
-  if (iserror) {
-    return <h4>uh oh something went wrong....</h4>;
-  }
+  
   //  console.log(ratinghotel,"rh")
+  function handleBooking(){
+    history.push("/payment")
+  }
   function handleImages(direction) {
     if (direction === "prev") {
       if (imageInd === 0) {
@@ -103,17 +111,21 @@ export function HotelResult() {
       setImageInd((prev) => prev + 1);
     }
   }
-
+  if (isloading) {
+    return <h1 style={{marginTop:"65px",textAlign:"center"}}>loading...</h1>;
+  }
+  if (iserror) {
+    return <h1 style={{marginTop:"65px",textAlign:"center"}}>uh oh something went wrong....</h1>;
+  }
   return (
     <div style={{ marginTop: "65px" }}>
       <div className={styles.Slider}>
-        <img src={images[imageInd].url} width="50%" alt="pn" />
+        <img src={images.length===0?"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2017%2F07%2F10-lotte-new-york-palace-WBNYC0517.jpg":images[0].url} width="50%" alt="no Imagee" />
       </div>
       <div>
         {" "}
         <button
           onClick={() => handleImages("prev")}
-          disable
           className={styles.btnp}
         >
           {" "}
@@ -144,7 +156,7 @@ export function HotelResult() {
 
             <div className={styles.gc1Header}>
               {" "}
-              <p>
+              <p style={{lineHeight:"35px"}}>
                 {resultData.starRating}-star {resultData.name}
               </p>{" "}
             </div>
@@ -506,7 +518,7 @@ export function HotelResult() {
                   <p> Price details</p>
                 </div>
                 <div>
-                  <button>Reserve</button>
+                  <button onClick={()=>handleBooking()}>Reserve</button>
                   <p>It takes only 2 minutes</p>
                 </div>
               </div>
@@ -634,7 +646,7 @@ export function HotelResult() {
                   </p>
                   <p>Non-refundable rate</p>
                   <p className={styles.bluewords}>Price details</p>
-                  <button className={styles.btnRes}>Reserve</button>
+                  <button className={styles.btnRes} onClick={()=>handleBooking()}>Reserve</button>
                   <p>It only takes 2 minutes</p>
                 </div>
               </div>
