@@ -46,11 +46,34 @@ export const LandingPage = () => {
   };
 
   // ***********************************************use HistoryRounded.push************************************************
-  const onsubmit = async (e) => {
+  const onsubmit =  (e) => {
     e.preventDefault();
-    await axios.put("http://localhost:3001/search", user);
+     axios.put("http://localhost:3001/search", user)
+     .then((res)=>{
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
     // *********************************************use HistoryRounded.push*************************************************************
   };
+   function sendDestinations([search,country]){
+   const payload={
+    destination:search,
+    checkin: "",
+    checkout: "",
+    guest: 5,
+    country
+   }
+
+    axios.put("http://localhost:3001/search", payload)
+    .then((res)=>{
+
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+
+  }
 
   return (
     <>
@@ -552,7 +575,7 @@ export const LandingPage = () => {
           <h1 className={styles.find}>Find 4-Star Hotels at 2-Star Prices</h1>
         </div>
         <div className={styles.grid}>
-          <div>
+          <div onClick={()=>sendDestinations(["Atlanta","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/131217-1x.jpg"
@@ -580,7 +603,8 @@ export const LandingPage = () => {
               <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
-          <div>
+
+          <div onClick={()=>sendDestinations(["Boston","USA"])} >
             <div className={styles.inner}>
               <img
                 src="	https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/4869-1x.jpg"
@@ -608,7 +632,8 @@ export const LandingPage = () => {
               <span className={styles.doller}>123</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          {/* change from here */}
+          <div onClick={()=>sendDestinations(["Seatel","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/24239-1x.jpg"
@@ -636,7 +661,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>159</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Nashville","USA"])} >
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/23801-1x.jpg"
@@ -664,7 +689,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>119</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["San Francisco","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/14657-1x.jpg"
@@ -692,7 +717,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>169</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Chicago","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30046-1x.jpg"
@@ -723,7 +748,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Montreal","Canada"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/6928-1x.jpg"
@@ -751,7 +776,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Orlando","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30112-1x.jpg"
@@ -779,7 +804,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>154</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["TORONTO","Canada"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/15605-1x.jpg"
@@ -807,7 +832,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>143</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Los Angles","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/2764-1x.jpg"
@@ -835,7 +860,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>183</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Denver","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/30117-1x.jpg"
@@ -863,7 +888,7 @@ export const LandingPage = () => {
               <span className={styles.doller}>139</span> <span>/night</span>
             </div>
           </div>
-          <div>
+          <div onClick={()=>sendDestinations(["Manhattan","USA"])}>
             <div className={styles.inner}>
               <img
                 src="https://ak-secure.hotwirestatic.com/current/static/images/hotel/hotelDeals/17211-1x.jpg"

@@ -95,6 +95,7 @@
   margin-top: 5px;
 }
 .input {
+  /* padding:0 30px; */
   border-radius: 5px;
   border: 1px solid black;
 }
@@ -1183,7 +1184,6 @@
     position: absolute;
     justify-content: center;
     margin-left: 0;
-    background: white;
     box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
     border-radius: 2px;
   }

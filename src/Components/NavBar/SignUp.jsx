@@ -136,7 +136,7 @@ export const SignUp = () => {
               </Box>
               <hr />
               <Box className={styles.SignInBox6}>
-                <p>Don't have an Account?</p>
+                <p>Already have an Account?</p>
                 {/* <NavLink to={"/SignIn"}>
                   <Button
                     className={styles.button1}
@@ -151,7 +151,7 @@ export const SignUp = () => {
                   variant="contained"
                   color="primary"
                 >
-                  Create One
+                  Sign In
                 </Button>
               </Box>
             </Box>
