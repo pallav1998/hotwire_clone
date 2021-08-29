@@ -95,6 +95,7 @@
   margin-top: 5px;
 }
 .input {
+  /* padding:0 30px; */
   border-radius: 5px;
   border: 1px solid black;
 }
@@ -351,14 +352,15 @@
 .card {
   /* display: flex; */
   width: 300px;
-  height: 500px;
+  height: auto;
   background-color: white;
   margin-top: 2%;
   margin-left: 14%;
   position: absolute;
   justify-content: center;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .hotel,
 .car,
@@ -1183,7 +1185,6 @@
     position: absolute;
     justify-content: center;
     margin-left: 0;
-    background: white;
     box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
     border-radius: 2px;
   }

@@ -141,7 +141,7 @@ export const SignUp = () => {
                   variant="contained"
                   color="primary"
                 >
-                  Create One
+                  Sign In
                 </Button>
               </Box>
             </Box>

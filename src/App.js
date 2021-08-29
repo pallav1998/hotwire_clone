@@ -7,6 +7,7 @@ import { Footer } from "./Components/Landingpage/Footer";
 import { HotelResult } from "./Components/Hotel_Ind_Page/HotelResult";
 import { SignIn } from "./Components/NavBar/SignIn";
 import { SignUp } from "./Components/NavBar/SignUp";
+import SearchHotel from "./Components/Searchedhotel/SearchedHotel";
 
 function App() {
   return (
@@ -16,17 +17,20 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
-        <Route path="/payment">
+        <Route exact path="/payment">
           <Payment />
         </Route>
-        <Route path="/hotelResult">
+        <Route exact path="/hotelResult">
           <HotelResult />
         </Route>
-        <Route path="/SignIn">
+        {/* <Route exact path="/SignIn">
           <SignIn />
         </Route>
-        <Route path="/SignUp">
+        <Route exact path="/SignUp">
           <SignUp />
+        </Route> */}
+        <Route exact path="/searchHotel">
+          <SearchHotel/>
         </Route>
       </Switch>
       <Footer />
