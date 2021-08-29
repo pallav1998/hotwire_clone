@@ -71,21 +71,21 @@ npm run start
 1.Landing Page
 
 <h4>This is our landing page </h4>
-<img src="public/Screenshot (1).png" width="400"/>
-<img src="public/Screenshot (2).png" width="400"/>
+<img src="public/Screenshot (1).png" width="700"/>
+<img src="public/Screenshot (2).png" width="700"/>
 
 2.Hotel Page 
 
 <h4>Here user can search and filter the data as per their requirement:- </h4>
-<img src="public/Screenshot (3).png" width="400"/>
+<img src="public/Screenshot (3).png" width="700"/>
 
 3. Hotel booking page
 <h4> Users can choose hotel here </h4>
-<img src="public/Screenshot (4).png" width="400"/>
+<img src="public/Screenshot (4).png" width="700"/>
 
 4.Payment page
 <h4> Description page </h4>
-<img src="public/Screenshot (5).png" width="400"/>
+<img src="public/Screenshot (5).png" width="700"/>
 
 
 
