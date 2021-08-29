@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useStyles } from "./NavBarStyles";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { logOutUser } from "../../ReduxStore/action";
@@ -23,14 +23,13 @@ export const NavBar = () => {
   const [support, setSupport] = useState("Feedback");
   const [currency, setCurrency] = useState("USD");
   const styles = useStyles();
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const runningUser = useSelector((state) => state.runningUser);
   const status = useSelector((state) => state.Loginstatus);
   console.log("statusRedux:", status);
- function signout(){
-  
-   dispatch(logOutUser("logout"))
- }
+  function signout() {
+    dispatch(logOutUser("logout"));
+  }
   return (
     <Container maxWidth="sm">
       <AppBar className={styles.navbar}>
@@ -43,7 +42,16 @@ export const NavBar = () => {
             className={styles.flex}
           >
             <Grid item className={styles.box1}>
-              <Link to="/"> <img className={styles.image} src="Logo.png" alt="Logo"  height="20" style={{marginTop:"7px"}} /> </Link>
+              <Link to="/">
+                {" "}
+                <img
+                  className={styles.image}
+                  src="Logo.png"
+                  alt="Logo"
+                  height="20"
+                  style={{ marginTop: "7px" }}
+                />{" "}
+              </Link>
               <Typography variant="h6">Hotels</Typography>
               <Typography variant="h6">Cars</Typography>
               <Typography variant="h6">Flight</Typography>
@@ -98,7 +106,9 @@ export const NavBar = () => {
               {status ? (
                 <Box className={styles.box2}>
                   <Button>Hi, {runningUser.FName}</Button>
-                  <Button  className={styles.button2} onClick={()=>signout()}>Sign Out</Button>
+                  <Button className={styles.button2} onClick={() => signout()}>
+                    Sign Out
+                  </Button>
                 </Box>
               ) : (
                 <Box className={styles.box2}>
