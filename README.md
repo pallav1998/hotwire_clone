@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Project-hotwire-clone
+Hotwire is a travel website that offers airline tickets, hotel rooms, rental cars, and vacation packages. It operates by selling off unsold travel inventory at discounted prices.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="public/Logo.png">  
 
-## Available Scripts
+**Our team was given a task to Clone the hotwire.com Website.**
 
-In the project directory, you can run:
+## Installing and Running
 
-### `npm start`
+Executing the commands mentioned below one by one in your command line will help in making this React app .
+**Cloning**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+git clone https://github.com/pallav1998/hotwire_clone.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After cloning the repo to get the JSON data from json-server, you should run below commands.
 
-### `npm run build`
+**For data**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+json-server hiristData.json --port 3001
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+**To run the react app execute below command**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+cd ./hotwire
+npm run start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## NPM Packages used
 
-## Learn More
+- ### react [![react](https://camo.githubusercontent.com/475b49b04214dfa67c1ec8a2837888ae63003feb7b71fd45be30ff360148ad87/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742e7376673f7374796c653d666c6174)](https://github.com/facebook/react)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ### react-router-dom [![react-router-dom](https://camo.githubusercontent.com/475b49b04214dfa67c1ec8a2837888ae63003feb7b71fd45be30ff360148ad87/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742e7376673f7374796c653d666c6174)](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- ### axios [![axios](https://camo.githubusercontent.com/1f22b6c297d1cb0e3aa68b2e6fed42da8b002bbefca8d63e99e0b790da8cce9b/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f6178696f732e7376673f7374796c653d666c61742d737175617265)](https://github.com/axios/axios)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ### create-react-app [![create-react-app](https://camo.githubusercontent.com/475b49b04214dfa67c1ec8a2837888ae63003feb7b71fd45be30ff360148ad87/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742e7376673f7374796c653d666c6174)](https://github.com/facebook/create-react-app)
+- ### styled-components [![styled-components](https://camo.githubusercontent.com/5ba6643341d94abdad0bc89edf930b9223664ffd462c61e4f32ec06cdbf50eb9/68747470733a2f2f636f6465636f762e696f2f67682f7374796c65642d636f6d706f6e656e74732f7374796c65642d636f6d706f6e656e74732f636f7665726167652e7376673f6272616e63683d6d61696e)](https://github.com/styled-components/styled-components)
+- ### iconify/react
+- ### react-redux
+- ### react-elastic-corousel [![react-elastic-corousel](https://camo.githubusercontent.com/f02d7ddafecce45e5c6e5d24ac76753cc2560e27eb41e347b4aed935392a32eb/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742d656c61737469632d6361726f7573656c2e7376673f7374796c653d666c61742d737175617265)](https://github.com/sag1v/react-elastic-carousel)
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p float="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150"/>
+  <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/css3-logo.png"  height="150"/> 
+  <img src="https://i.pinimg.com/originals/50/a6/42/50a6428d99f98e808074cceaf4c755e7.png"  height="150"/>
+  <img src="https://easybase.io/assets/images/posts_images/5-great-react-libraries-1.png" height="150"/>
+  <img src="https://coursework.vschool.io/content/images/2017/12/1_BPKkrOCvDkJD4y8HWyZ2Gw.png" height="150"/>
+  
+</p>
 
-### Analyzing the Bundle Size
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Fullscreen mode
+- Easy navigation by category section_
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### We have focused mainly on:
 
-### Advanced Configuration
+1.Landing Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<h4>This is our landing page </h4>
+<img src="public/Screenshot (867).png" width="400"/>
 
-### Deployment
+2.Hotel Page 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<h4>Here user can search and filter the data as per their requirement:- </h4>
+<img src="public/Screenshot (869).png" width="400"/>
 
-### `npm run build` fails to minify
+3. Hotel booking page
+<h4> Users can choose hotel here </h4>
+<img src="public/Screenshot (870).png" width="400"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4.Payment page
+<h4> Description page </h4>
+<img src="public/Screenshot (871).png" width="400"/>
+
+
+
+
+
+## Team Members and Contributors
+
+- [@Noor Muhammed](https://github.com/NOORMUHAMM)
+- [@Mahesh Gupta ](https://github.com/maheshguptha49)
+- [@Pallav jain](https://github.com/pallav1998)
+- [@Piyush kumar](https://github.com/omkarvgavade)
