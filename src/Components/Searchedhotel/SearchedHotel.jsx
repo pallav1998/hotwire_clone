@@ -17,7 +17,7 @@ import SecurityIcon from '@material-ui/icons/Security';
 import { useEffect, useState } from 'react';
 import "./Hotel.css"
 import ReactMapGL from 'react-map-gl';
-import { Button, MenuItem } from '@material-ui/core';
+import {  MenuItem } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 //import Mapp from './map';
 
@@ -57,18 +57,18 @@ const hotelClass = [
   "1-Star"
 ]
 
-const labels = {
-  0.5: 'Useless',
-  1: 'Useless+',
-  1.5: 'Poor',
-  2: 'Poor+',
-  2.5: 'Ok',
-  3: 'Good',
-  3.5: 'Good',
-  4: 'Good+',
-  4.5: 'Excellent',
-  5: 'Excellent+',
-};
+// const labels = {
+//   0.5: 'Useless',
+//   1: 'Useless+',
+//   1.5: 'Poor',
+//   2: 'Poor+',
+//   2.5: 'Ok',
+//   3: 'Good',
+//   3.5: 'Good',
+//   4: 'Good+',
+//   4.5: 'Excellent',
+//   5: 'Excellent+',
+// };
 export default function SearchHotel() {
 
   const [sort, setSort] = useState("Best Match")
