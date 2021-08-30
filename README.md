@@ -56,7 +56,7 @@ npm run start
   <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/css3-logo.png"  height="100" width="100"/> 
   <img src="https://i.pinimg.com/originals/50/a6/42/50a6428d99f98e808074cceaf4c755e7.png"  height="100" width="100"/>
   <img src="https://easybase.io/assets/images/posts_images/5-great-react-libraries-1.png" height="100" width="100"/>
-  <img src="https://coursework.vschool.io/content/images/2017/12/1_BPKkrOCvDkJD4y8HWyZ2Gw.png" height="150" width="100"/>
+  <img src="https://coursework.vschool.io/content/images/2017/12/1_BPKkrOCvDkJD4y8HWyZ2Gw.png" height="100" width="150"/>
 </p>
 
 ## Features
