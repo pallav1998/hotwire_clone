@@ -1,0 +1,1265 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+.topBanner {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: #db3939;
+  color: white;
+}
+.backgroundPic {
+  display: flex;
+  background-image: url(https://tpc.googlesyndication.com/simgad/5827262374090483608?);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 760px;
+  background-size: cover;
+}
+.topBanner > span {
+  margin: 5px auto;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: italic;
+  font-weight: 700;
+  font-family: MissionGothic, Open Sans, Arial, sans-serif;
+}
+.topBanner > span > a {
+  color: white;
+  margin-left: 5px;
+}
+.whyChoose {
+  width: 100%;
+  height: 221px;
+  background-color: hsl(0, 0%, 90%);
+  text-align: center;
+}
+.whyChoose > img {
+  width: 992px;
+  height: 221px;
+}
+.mobile {
+  display: flex;
+  width: 59%;
+  margin: 30px auto;
+}
+/* .mobileImg{
+  
+    
+} */
+.mobileImg > img {
+  height: 335px;
+  width: 283px;
+}
+.heading {
+  width: 60%;
+  margin-left: 30px;
+}
+.heading > h1 {
+  color: #db3939;
+  font-style: italic;
+  font-weight: 700;
+  font-family: MissionGothic, Open Sans, Arial, sans-serif;
+}
+.heading > h3 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #2a2e3b;
+  margin-top: 10px;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+}
+.playstore {
+  display: flex;
+}
+.playstoreImg1 > img {
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.playstoreImg > img {
+  margin-top: 15px;
+  width: 150px;
+}
+.input > i > input {
+  border: none;
+  background: none;
+  font-size: 20px;
+  outline: none;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.input {
+  /* padding:0 30px; */
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.inp {
+  display: flex;
+  width: 100%;
+  font-size: 500;
+}
+.btn {
+  position: relative;
+  margin-left: 5px;
+  background-color: #db3939;
+  border-color: #db3939;
+  color: #fff;
+  box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  border-radius: 40000px;
+  padding: 10px 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.ptag {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.para {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.email {
+  background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+  height: 120px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.email > div {
+  width: 48%;
+  margin-left: 2%;
+  padding-top: 30px;
+}
+.emailInput > input {
+  font-size: large;
+  height: 30px;
+  width: 300px;
+}
+.emailHeading {
+  font-size: large;
+}
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 25px;
+  width: 70%;
+  margin: 0 auto;
+}
+.grid > div {
+  width: 250px;
+  height: 400px;
+  display: block;
+
+  border: 1px solid #dee1e7;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.inner img {
+  width: 100%;
+  transition: all 1.5s ease;
+}
+.inner:hover img {
+  transform: scale(1.5);
+}
+.inner {
+  overflow: hidden;
+}
+.headings {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.advertisement {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.advertisement > div {
+  width: 47%;
+}
+.advertisement > p {
+  margin-top: -15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.ad {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  gap: 9%;
+  margin-bottom: 20px;
+}
+.ad > div {
+  width: 300px;
+  height: 250px;
+  margin-top: 20px;
+}
+.gap {
+  width: 71%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.details {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.detail {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.detail > a {
+  text-decoration: none;
+  margin-left: 2px;
+}
+.footer {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.footer > div {
+  width: 25%;
+  font-size: 14px;
+  color: #2a2e3b;
+}
+.footerFirst {
+  width: 100%;
+  margin: 0 auto;
+  background: #f0f0f0;
+  font-size: 14px;
+  z-index: 20;
+  color: #2a2e3b;
+}
+.copyRight {
+  width: 70%;
+  margin: 0 auto;
+}
+.copyRight > img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+}
+.footer > div > p {
+  margin-top: 5px;
+  line-height: 10px;
+}
+.footer > div > h3 {
+  margin-top: 25px;
+}
+.copyRight > p {
+  margin-bottom: 35px;
+  font-size: small;
+}
+.badge {
+  height: 80px;
+  font-weight: 700;
+  overflow: hidden;
+}
+.badge::after {
+  overflow: hidden;
+  position: relative;
+}
+.bad {
+  position: relative;
+  overflow: hidden;
+}
+.badge::before {
+  content: "";
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  height: 114px;
+  width: 114px;
+  background-color: #db3939;
+  position: absolute;
+  right: -55px;
+  top: -67px;
+  transform: rotate(45deg);
+}
+.star {
+  text-align: center;
+  margin-top: -50px;
+}
+.star > h2 {
+  font-style: italic;
+  font-weight: 700;
+  font-family: MissionGothic, Open Sans, Arial, sans-serif;
+  color: #db3939;
+  display: block;
+  white-space: nowrap;
+  max-width: 213px;
+  margin: auto auto 12px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+}
+.star > p {
+  margin-top: 10px;
+}
+.doller {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #db3939;
+  padding-top: 100px;
+}
+.doller_symbol {
+  font-size: 30px;
+
+  font-weight: 700;
+  color: #db3939;
+}
+.head > h3 {
+  position: absolute;
+  margin-left: 13%;
+  margin-top: -80px;
+  color: white;
+}
+.head > p {
+  position: absolute;
+  margin-left: 14%;
+  margin-top: -55px;
+  color: white;
+}
+.card {
+  /* display: flex; */
+  width: 300px;
+  height: auto;
+  background-color: white;
+  margin-top: 2%;
+  margin-left: 14%;
+  position: absolute;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.hotel,
+.car,
+.flight,
+.bundle {
+  background-color: #f8f9fa;
+  border: 1px solid #dee1e7;
+  border-top: 0;
+  height: 56px;
+  flex: 1 0 auto;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+.hotel .car .flight .bundle.inactive {
+  color: #6c7385;
+  padding-top: 3px;
+}
+
+.hotel .car .flight .bundle.active {
+  background-color: #fff;
+  border-color: #db3939 transparent transparent;
+  border-style: solid;
+  border-width: 3px 0 1px;
+  padding: 0 1px;
+  color: #db3939;
+}
+.bundle:hover {
+  color: #db3939;
+}
+.car:hover {
+  color: #db3939;
+}
+.hotel:hover {
+  color: #db3939;
+}
+.flight:hover {
+  color: #db3939;
+}
+.learn_more {
+  margin: 0 auto;
+  width: 70%;
+
+  height: 60px;
+  position: relative;
+  display: flex;
+  bottom: -90%;
+  background: white;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.laernButton {
+  background: linear-gradient(rgb(0, 101, 184) 0px, rgb(0, 89, 162) 100%);
+  border: 1px solid rgb(0, 101, 184);
+  border-radius: 4px;
+  box-shadow: rgb(0 59 112) 0px 1px 0px 0px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.form {
+  margin-top: 20px;
+}
+.cardButton {
+  height: 50px;
+  width: 75px;
+}
+.cardButton:focus {
+  color: #db3939;
+  background: none;
+  border: none;
+  border-top: 3px solid #db3939;
+}
+.cardButton:visited {
+  color: #db3939;
+  background: none;
+  border: none;
+}
+.cardButton:hover {
+  color: #db3939;
+}
+.formLabel > label {
+  font-weight: 700;
+  color: #2a2e3b;
+  font-size: 14px;
+  line-height: 18px;
+}
+.formLabel > form > button {
+  border-radius: 1000px;
+  border: none;
+  height: 44px;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  user-select: none;
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #db3939;
+  border-color: #db3939;
+  color: #fff;
+
+  box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+  margin-top: 24px;
+  padding: 0 16px;
+  width: 100%;
+  float: left;
+}
+/************************* Large devices (laptops/desktops, 992px and up) ************************************************************/
+@media only screen and (min-width: 70px) and (max-width: 89px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+  .email {
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 120px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+  }
+  .email > div {
+    width: 48%;
+    margin-left: 2%;
+    padding-top: 30px;
+  }
+  .emailInput > input {
+    font-size: small;
+    height: 30px;
+    width: 200px;
+  }
+  .emailHeading {
+    font-size: large;
+  }
+
+  .input {
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  .inp {
+    display: block;
+    width: 100%;
+    font-size: 200;
+  }
+  .backgroundPic {
+    display: flex;
+    background-image: url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-1440px-2x.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 760px;
+  }
+  .btn {
+    position: relative;
+    margin-left: 5px;
+    background-color: #46db39;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+  .grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid > div {
+    width: 240px;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .ad {
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+    gap: 9%;
+    margin-bottom: 20px;
+  }
+  .mobile {
+    display: flex;
+    width: 70%;
+    margin: 30px auto;
+  }
+  .detail {
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+  }
+}
+
+/* *******************************@media only screen and (min-width: 900px) and (max-width: 1200px) ***********************************/
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .email {
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 120px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    margin-left: 15%;
+  }
+  .email > div {
+    width: 48%;
+    margin-left: 2%;
+    padding-top: 30px;
+  }
+  .emailInput > input {
+    font-size: small;
+    height: 30px;
+    width: 180px;
+  }
+  .emailHeading {
+    font-size: large;
+  }
+
+  .grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 25px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .grid > div {
+    width: 210px;
+    height: 350px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .ad {
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+    gap: 9%;
+    margin-bottom: 20px;
+  }
+
+  .mobile {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+  }
+  .input {
+    border-radius: 5px;
+  }
+  .inp {
+    display: flex;
+    width: 60%;
+    font-size: 300;
+  }
+  .btn {
+    position: relative;
+    margin-left: 5px;
+    background-color: #db3939;
+    border-color: #1b2fe9;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .whyChoose {
+    width: 100%;
+    height: 221px;
+    background-color: hsl(0, 0%, 90%);
+    text-align: center;
+  }
+  .whyChoose > img {
+    width: 100%;
+  }
+}
+
+/* @media only screen and (max-width: 778px) and (min-width:899px)  {
+.grid{
+    display: grid;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 25px;
+    width: 70%;
+    margin:0 auto;
+  
+
+
+}
+.grid>div{
+    width: 250px;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  
+}
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.ad>div{
+    width: 100px;
+    height: 250px;
+    margin-top: 20px;
+  
+}
+
+
+} 
+@media only screen and (max-width:777px)  {
+.grid{
+    display: none;
+  
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(6,auto);
+    gap: 25px;
+    width: 70%;
+    margin:0 auto;
+  
+
+
+}
+
+.ad{
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+      gap:9%;
+      margin-bottom: 20px;
+}
+.ad>div{
+    width: 100px;
+    height: 250px;
+    margin-top: 20px;
+  
+}
+
+} */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+  }
+  .container {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+  .email {
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: auto;
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  .emailInput > input {
+    font-size: small;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .emailHeading {
+    font-size: large;
+  }
+
+  .input {
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  .inp {
+    display: block;
+    width: 100%;
+    font-size: 200;
+  }
+  .backgroundPic {
+    display: flex;
+    background-image: url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-1440px-2x.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 760px;
+  }
+  .btn {
+    position: relative;
+    margin-left: 5px;
+    background-color: #1506f1;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 10px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+  .grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid > div {
+    width: 99%;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .ad {
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+    gap: 9%;
+    margin-bottom: 20px;
+  }
+  .mobile {
+    display: flex;
+    width: 100%;
+    margin: 30px auto;
+  }
+  .detail {
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+  }
+  .whyChoose {
+    width: 100%;
+    height: 221px;
+    background-color: hsl(0, 0%, 90%);
+    text-align: center;
+  }
+  .whyChoose > img {
+    width: 100%;
+  }
+  .mobileImg > img {
+    height: 235px;
+    width: 183px;
+  }
+  .heading {
+    width: 40%;
+    margin-left: 30px;
+  }
+  .heading > h1 {
+    color: #db3939;
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic, Open Sans, Arial, sans-serif;
+  }
+  .heading > h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2e3b;
+    margin-top: 10px;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, sans-serif;
+  }
+
+  .playstoreImg1 > img {
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  .playstoreImg > img {
+    margin-top: 15px;
+    width: 100px;
+  }
+  .input {
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  .inp {
+    width: 100%;
+    font-size: 500;
+  }
+  .detail {
+    display: block;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+  .topBanner {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #db3939;
+    color: white;
+  }
+  .email {
+    display: block;
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images/common/background/pattern_gray_tiled-sm.png?impolicy=uhph);
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .email > div {
+    width: 98%;
+
+    padding-top: 30px;
+  }
+  .emailInput > input {
+    font-size: small;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .emailHeading {
+    font-size: large;
+  }
+
+  .input {
+    border-radius: 5px;
+  }
+  .inp {
+    display: block;
+    width: 100%;
+    font-size: 200;
+  }
+  .backgroundPic {
+    background-image: url(https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/TossMetheKeysSale/uhp-575px-2x.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-clip: border-box;
+  }
+  .btn {
+    position: relative;
+    margin-left: 5px;
+    background-color: #06f1f1;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: none;
+    white-space: nowrap;
+    border-radius: 40000px;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+  .grid {
+    display: none;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid > div {
+    width: 100%;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .ad {
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+    gap: 9%;
+    margin-bottom: 20px;
+  }
+  .mobile {
+    width: 100%;
+    margin: 0 auto;
+
+    background: linear-gradient(139.75deg, #db3939, #7d32ad 103.01%);
+  }
+  .detail {
+    display: flex;
+    gap: 5px;
+    width: 70%;
+    font-size: small;
+  }
+  .whyChoose {
+    width: 100%;
+    height: 700px;
+    /* background-color:hsl(0, 0%, 90%); */
+    text-align: center;
+
+    background-image: url(https://ak-secure.hotwirestatic.com/current/static/images//shared-experiments/RTB19/uhp-confidence-320@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+  }
+  .whyChoose > img {
+    display: none;
+  }
+  .mobileImg > img {
+    height: 335px;
+    width: 203px;
+    margin-left: 0;
+  }
+  .heading {
+    width: 50%;
+  }
+  .heading > h1 {
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic, Open Sans, Arial, sans-serif;
+  }
+  .heading > h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #2a2e3b;
+    margin-top: 10px;
+    font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, sans-serif;
+  }
+
+  .playstoreImg1 > img {
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  .playstoreImg > img {
+    margin-top: 15px;
+    width: 70px;
+  }
+  .input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 40px;
+  }
+  .inp {
+    margin-top: 5px;
+    width: 80%;
+    font-size: 100;
+  }
+  .detail {
+    display: block;
+    gap: 5px;
+    width: 100%;
+    font-size: small;
+  }
+  .footer {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  .footer > div {
+    width: 90%;
+    font-size: 14px;
+
+    color: #2a2e3b;
+  }
+  .footerFirst {
+    width: 92%;
+    margin: 0 auto;
+    background: #f8f9fa;
+    font-size: 14px;
+    z-index: 20;
+    color: #2a2e3b;
+  }
+  .copyRight {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .copyRight > img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+  }
+  .footer > div > p {
+    margin-top: 5px;
+  }
+  .footer > div > h3 {
+    margin-top: 25px;
+  }
+  .copyRight > p {
+    margin-bottom: 35px;
+    font-size: small;
+  }
+
+  .formLabel > label {
+    font-weight: 700;
+    color: #2a2e3b;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .formLabel > form > button {
+    border-radius: 1000px;
+
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 900;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    box-sizing: border-box;
+    user-select: none;
+    transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-color: #db3939;
+    border-color: #db3939;
+    color: #fff;
+    box-shadow: none;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    margin-top: 24px;
+    padding: 0 16px;
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+    margin-bottom: 20px;
+  }
+  .card {
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 0;
+    position: absolute;
+    justify-content: center;
+    margin-left: 0;
+    box-shadow: 0 4px 7px 0 rgb(42 46 59 / 16%);
+    border-radius: 2px;
+  }
+  .card > div > button {
+    width: 100%;
+  }
+  .formLabel > form > input {
+    margin-top: 20px;
+  }
+  .input {
+    margin-top: 20px;
+  }
+  .formHeading {
+    font-style: italic;
+    font-weight: 700;
+    font-family: MissionGothic, Open Sans, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+
+    color: #db3939;
+    text-align: center;
+  }
+  .learn_more {
+    display: none;
+  }
+  .ptag {
+    display: none;
+  }
+  .para {
+    display: none;
+  }
+  .find {
+    display: none;
+  }
+  .input > i > input {
+    border: none;
+    background: none;
+    font-size: 15px;
+    outline: none;
+    margin-left: 20px;
+    padding-top: -30px;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid > div {
+    width: 97%;
+    height: 400px;
+    display: block;
+
+    border: 1px solid #dee1e7;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .ad {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    gap: 7%;
+    margin-bottom: 20px;
+  }
+  .ad > div {
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+  }
+}
