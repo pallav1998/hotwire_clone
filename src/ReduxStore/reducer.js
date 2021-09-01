@@ -1,6 +1,19 @@
-import { GETDETAILS, ADDUSERDETAILS, LOGINSTATUS, UPDATE_RUNNING_USER, LOGIN_FAILED, LOGOUT_USER } from "./actionType";
+import {
+  GETDETAILS,
+  ADDUSERDETAILS,
+  LOGINSTATUS,
+  UPDATE_RUNNING_USER,
+  LOGIN_FAILED,
+  LOGOUT_USER,
+} from "./actionType";
 
-const initState = { data: [], user: [], Loginstatus: false,runningUser:{},loginError:false };
+const initState = {
+  data: [],
+  user: [],
+  Loginstatus: false,
+  runningUser: {},
+  loginError: false,
+};
 
 export const reducerFunction = (state = initState, { type, payload }) => {
   switch (type) {
@@ -21,23 +34,23 @@ export const reducerFunction = (state = initState, { type, payload }) => {
         Loginstatus: payload,
       };
     case UPDATE_RUNNING_USER:
-      return{
+      return {
         ...state,
-        runningUser:payload
-      }
+        runningUser: payload,
+      };
     case LOGIN_FAILED:
       return {
         ...state,
-        loginError:payload
-      }
+        loginError: payload,
+      };
     case LOGOUT_USER:
-      console.log("logout user reducer")
+      console.log("logout user reducer");
       return {
         ...state,
-        Loginstatus:false,
-        runningUser:{},
-        data:[]
-      }
+        Loginstatus: false,
+        runningUser: {},
+        data: [],
+      };
     default: {
       return state;
     }

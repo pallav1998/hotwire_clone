@@ -7,13 +7,7 @@ export const useStyles = makeStyles({
     width: "100vw",
     backgroundColor: "#f8f8f8d8",
   },
-  checkInDetails:{
-    display:"flex",
-    justifyContent:"space-around",
-    "& p":{
-      color: "gray",
-    }
-  },
+
   page: {
     display: "flex",
     width: "75%",
@@ -157,13 +151,22 @@ export const useStyles = makeStyles({
     },
   },
 
+  checkInDetails: {
+    display: "flex",
+    justifyContent: "space-around",
+    "& p": {
+      color: "gray",
+      lineHeight: "10px",
+    },
+  },
+
   box2: {
     width: "26%",
     border: "1px solid black",
     height: "600px",
     position: "fixed",
     left: "67%",
-    bottom:"5%",
+    bottom: "5%",
 
     "&>h2": {
       marginLeft: "20px",
@@ -173,9 +176,7 @@ export const useStyles = makeStyles({
       width: "83%",
       margin: "auto",
       color: "lightGray",
-      
-      
-    }
+    },
   },
   box2_Div1: {
     width: "100%",
@@ -183,158 +184,142 @@ export const useStyles = makeStyles({
     height: "50px",
     backgroundColor: "#d43131",
     display: "flex",
-    color:"white",
-    
-   
+    color: "white",
+
     "&>span": {
       fontSize: "20px",
       marginTop: "3%",
-      marginLeft:"5px"
-    }
+      marginLeft: "5px",
+    },
   },
   box2_Div2: {
     display: "flex",
     marginLeft: "20px",
-    color:"#d43131",
+    color: "#d43131",
+
+    "&>svg": {
+      marginBottom: "20px",
+      marginTop: "4px",
+    },
 
     "&>h1": {
-      marginTop:"2%"
+      marginTop: "2%",
     },
     "&>h1>span": {
       color: "gray",
-      fontWeight:"400"
-    }
-    
-  },
-  box2_Div3: {
-    marginLeft: "22px",
-    marginTop: "-8%",
-    fontWeight: "500",
-    color:"gray"
+      fontWeight: "400",
+    },
   },
   box2_Div4: {
     //marginLeft: "20px",
-     marginLeft: "22px",
+    marginLeft: "22px",
     marginTop: "-8%",
     fontWeight: "500",
-    color:"gray"
+    color: "gray",
   },
   hotIcon: {
-    marginTop:"4%"
+    marginTop: "4%",
   },
   box2_Div6: {
     display: "flex",
     marginLeft: "22px",
-    marginTop:"2%",
-    
+    marginTop: "2%",
+
     "&>div": {
       width: "40px",
       height: "20px",
-      backgroundColor: "green",
+      backgroundColor: "#af4507",
       borderRadius: "5px",
-      
-      
+      padding: "2px",
+      textAlign: "center",
+      color: "#fff",
     },
-    "&>p": {
-      marginTop: "-0.5%",
-      marginLeft: "5px",
-      color:"#54ce7c"
-    }
+    "&>h3": {
+      marginTop: "8px",
+      marginLeft: "8px",
+      color: "#0e662b",
+      lineHeight: "5px",
+    },
   },
   box2_Div5: {
-    marginLeft:"20px"
+    marginLeft: "20px",
   },
   box2_Div7: {
     marginLeft: "20px",
-    display:"flex",
-    
+    display: "flex",
+
     "&>span": {
       marginLeft: "20%",
-      
-      
     },
     "&>p": {
       marginTop: "-0.5%",
-      color:"gray"
-    }
+      color: "gray",
+    },
   },
-   box2_Div8: {
+  box2_Div8: {
     marginLeft: "20px",
-    display:"flex",
-    
+    display: "flex",
+
     "&>span": {
       marginLeft: "13%",
-       textDecoration: "line-through"
-      
-      
+      textDecoration: "line-through",
+      marginTop: "-5px",
     },
     "&>p": {
       marginTop: "-0.5%",
       color: "gray",
-     
-    }
+      lineHeight: "2px",
+    },
   },
-    box2_Div9: {
-    marginLeft: "20px",
-      display: "flex",
-    marginTop:"10px",
-    
+  box2_Div9: {
+    display: "flex",
+
+    backgroundColor: "#edfaf1",
+
     "&>span": {
-      marginLeft: "53%",
-       
-      
-      
+      marginLeft: "50%",
+      marginTop: "10px",
     },
     "&>p": {
-      marginTop: "-0.5%",
+      marginTop: "10px",
+      marginLeft: "20px",
       color: "gray",
-     
-    }
+    },
   },
   box2_Div10: {
-       width: "100%",
-       height: "18%",
+    width: "100%",
+    height: "17.5%",
     backgroundColor: "#edfaf1",
-    paddingTop: "20px",
-    borderBottom:"3px solid #54ce7c",
-    
-    
+    borderBottom: "3px solid #54ce7c",
+
     "&>hr": {
       width: "83%",
       margin: "auto",
       color: "lightGray",
     },
     "&>p": {
-      
       color: "#54ce7c",
       marginLeft: "20px",
-     
-     
-    }
+      lineHeight: "2px",
     },
-     box2_Div10_Div: {
-    
-      display: "flex",
-       marginTop: "10px",
-      
-    
+  },
+  box2_Div10_Div: {
+    display: "flex",
+    marginTop: "-10px",
+
     "&>span": {
       marginLeft: "53%",
-       color:"#36a38c",
-      
-      
+      color: "#36a38c",
     },
     "&>p": {
       marginTop: "-0.5%",
       color: "#36a38c",
       marginLeft: "20px",
-     
-     
-    }
+    },
   },
 
   circleoutIcon: {
-    marginTop:"4%"
+    marginTop: "4%",
   },
 
   RefNo: {
@@ -345,7 +330,7 @@ export const useStyles = makeStyles({
     lineHeight: "16px",
 
     "&>p": {
-      marginLeft:"13%"
-    }
+      marginLeft: "13%",
+    },
   },
 });
