@@ -22,7 +22,7 @@ After cloning the repo to get the JSON data from json-server, you should run bel
 **For data**
 
 ```
-json-server hiristData.json --port 3001
+json-server db.json --port 3001
 
 
 ```
@@ -52,13 +52,12 @@ npm run start
 ## Technologies Used
 
 <p float="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150"/>
-  <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/css3-logo.png"  height="150"/> 
-  <img src="https://i.pinimg.com/originals/50/a6/42/50a6428d99f98e808074cceaf4c755e7.png"  height="150"/>
-  <img src="https://easybase.io/assets/images/posts_images/5-great-react-libraries-1.png" height="150"/>
-  <img src="https://coursework.vschool.io/content/images/2017/12/1_BPKkrOCvDkJD4y8HWyZ2Gw.png" height="150"/>
-  
-</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="100" width="100"/> &nbsp;
+  <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/css3-logo.png"  height="100" width="120"/> &nbsp;
+  <img src="https://i.pinimg.com/originals/50/a6/42/50a6428d99f98e808074cceaf4c755e7.png"  height="100" width="120"/> &nbsp;
+  <img src="https://easybase.io/assets/images/posts_images/5-great-react-libraries-1.png" height="100" width="150"/> &nbsp;
+  <img src="https://coursework.vschool.io/content/images/2017/12/1_BPKkrOCvDkJD4y8HWyZ2Gw.png" height="100" width="150"/>
+</p> 
 
 ## Features
 
@@ -96,4 +95,4 @@ npm run start
 - [@Noor Muhammed](https://github.com/NOORMUHAMM)
 - [@Mahesh Gupta ](https://github.com/maheshguptha49)
 - [@Pallav jain](https://github.com/pallav1998)
-- [@Piyush kumar](https://github.com/omkarvgavade)
+- [@Piyush kumar](https://github.com/)
