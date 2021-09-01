@@ -22,7 +22,7 @@ After cloning the repo to get the JSON data from json-server, you should run bel
 **For data**
 
 ```
-json-server hiristData.json --port 3001
+json-server db.json --port 3001
 
 
 ```
@@ -95,4 +95,4 @@ npm run start
 - [@Noor Muhammed](https://github.com/NOORMUHAMM)
 - [@Mahesh Gupta ](https://github.com/maheshguptha49)
 - [@Pallav jain](https://github.com/pallav1998)
-- [@Piyush kumar](https://github.com/omkarvgavade)
+- [@Piyush kumar](https://github.com/)
