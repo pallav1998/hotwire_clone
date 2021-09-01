@@ -5,34 +5,12 @@ Hotwire is a travel website that offers airline tickets, hotel rooms, rental car
 
 **Our team was given a task to Clone the hotwire.com Website.**
 
-## Installing and Running
+### To visit our website [Click here](https://hotwire.netlify.app/)
 
-Executing the commands mentioned below one by one in your command line will help in making this React app .
-**Cloning**
-
+## **For data Just Download json File **
+Run this Command
 ```
-git clone https://github.com/pallav1998/hotwire_clone.git
-
-npm install
-
-```
-
-After cloning the repo to get the JSON data from json-server, you should run below commands.
-
-**For data**
-
-```
-json-server hiristData.json --port 3001
-
-
-```
-
-**To run the react app execute below command**
-
-```
-cd ./hotwire
-npm run start
-
+json-server db.json --port 3001
 ```
 
 
