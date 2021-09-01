@@ -5,9 +5,9 @@ Hotwire is a travel website that offers airline tickets, hotel rooms, rental car
 
 **Our team was given a task to Clone the hotwire.com Website.**
 
-### To visit our website [Click here](https://hotwire.netlify.app/)
+# To visit our website [Click here](https://hotwire.netlify.app/)
 
-## **For data Just Download json File **
+## For data Just Download json File
 Run this Command
 ```
 json-server db.json --port 3001
