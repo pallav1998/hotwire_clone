@@ -152,11 +152,183 @@ export const useStyles = makeStyles({
   },
 
   box2: {
-    width: "22%",
+    width: "26%",
     border: "1px solid black",
     height: "600px",
     position: "fixed",
     left: "67%",
+    bottom:"5%",
+
+    "&>h2": {
+      marginLeft: "20px",
+      //marginTop:"1px"
+    },
+    "&>hr": {
+      width: "83%",
+      margin: "auto",
+      color: "lightGray",
+      
+      
+    }
+  },
+  box2_Div1: {
+    width: "100%",
+    //marginTop:"-18px",
+    height: "50px",
+    backgroundColor: "#d43131",
+    display: "flex",
+    color:"white",
+    
+   
+    "&>span": {
+      fontSize: "20px",
+      marginTop: "3%",
+      marginLeft:"5px"
+    }
+  },
+  box2_Div2: {
+    display: "flex",
+    marginLeft: "20px",
+    color:"#d43131",
+
+    "&>h1": {
+      marginTop:"2%"
+    },
+    "&>h1>span": {
+      color: "gray",
+      fontWeight:"400"
+    }
+    
+  },
+  box2_Div3: {
+    marginLeft: "22px",
+    marginTop: "-8%",
+    fontWeight: "500",
+    color:"gray"
+  },
+  box2_Div4: {
+    //marginLeft: "20px",
+     marginLeft: "22px",
+    marginTop: "-8%",
+    fontWeight: "500",
+    color:"gray"
+  },
+  hotIcon: {
+    marginTop:"4%"
+  },
+  box2_Div6: {
+    display: "flex",
+    marginLeft: "22px",
+    marginTop:"2%",
+    
+    "&>div": {
+      width: "40px",
+      height: "20px",
+      backgroundColor: "green",
+      borderRadius: "5px",
+      
+      
+    },
+    "&>p": {
+      marginTop: "-0.5%",
+      marginLeft: "5px",
+      color:"#54ce7c"
+    }
+  },
+  box2_Div5: {
+    marginLeft:"20px"
+  },
+  box2_Div7: {
+    marginLeft: "20px",
+    display:"flex",
+    
+    "&>span": {
+      marginLeft: "20%",
+      
+      
+    },
+    "&>p": {
+      marginTop: "-0.5%",
+      color:"gray"
+    }
+  },
+   box2_Div8: {
+    marginLeft: "20px",
+    display:"flex",
+    
+    "&>span": {
+      marginLeft: "13%",
+       textDecoration: "line-through"
+      
+      
+    },
+    "&>p": {
+      marginTop: "-0.5%",
+      color: "gray",
+     
+    }
+  },
+    box2_Div9: {
+    marginLeft: "20px",
+      display: "flex",
+    marginTop:"10px",
+    
+    "&>span": {
+      marginLeft: "53%",
+       
+      
+      
+    },
+    "&>p": {
+      marginTop: "-0.5%",
+      color: "gray",
+     
+    }
+  },
+  box2_Div10: {
+       width: "100%",
+       height: "18%",
+    backgroundColor: "#edfaf1",
+    paddingTop: "20px",
+    borderBottom:"3px solid #54ce7c",
+    
+    
+    "&>hr": {
+      width: "83%",
+      margin: "auto",
+      color: "lightGray",
+    },
+    "&>p": {
+      
+      color: "#54ce7c",
+      marginLeft: "20px",
+     
+     
+    }
+    },
+     box2_Div10_Div: {
+    
+      display: "flex",
+       marginTop: "10px",
+      
+    
+    "&>span": {
+      marginLeft: "53%",
+       color:"#36a38c",
+      
+      
+    },
+    "&>p": {
+      marginTop: "-0.5%",
+      color: "#36a38c",
+      marginLeft: "20px",
+     
+     
+    }
+  },
+
+  circleoutIcon: {
+    marginTop:"4%"
   },
 
   RefNo: {

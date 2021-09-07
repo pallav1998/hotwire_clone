@@ -3,10 +3,29 @@ import { useStyles } from "./PaymentStyles";
 import { FaUser, FaLock } from "react-icons/fa";
 import { BsDot } from "react-icons/bs";
 import { AiFillTags } from "react-icons/ai";
+import WhatshotIcon from '@material-ui/icons/Whatshot';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
+import Rating from "@material-ui/lab/Rating";
 
 export const Payment = () => {
   const styles = useStyles();
+  const [fetchData,setFetchData]=useState([])
+  const tax = 7.22;
 
+  useEffect(() => {
+    axios.get("http://localhost:3001/data").then((data) => {
+     
+      var update=data.data.filter((e)=>"7d5158f8-3de7-4ce3-9a24-036b3c843c52"===e.hotelId)
+      console.log(update,1)
+       setFetchData(update)
+
+    })
+   
+  },[])
+ console.log(fetchData)
   return (
     <Box className={styles.Mainpage}>
       <Box className={styles.page}>
@@ -241,7 +260,58 @@ export const Payment = () => {
             </Box>
           </Box>
         </Box>
-        <Box className={styles.box2}></Box>
+        <Box className={styles.box2}>
+          <div className={styles.box2_Div1}>
+            <CheckCircleOutlineIcon  className={ styles.circleoutIcon}/><span>Low price guarantee</span>
+          </div>
+          <h2>Trip Summary</h2>
+          <hr/>
+          <div className={styles.box2_Div2}>
+            <WhatshotIcon fontSize="large" className={styles.hotIcon} />
+            <h1>Hot Rate <span>Hotel</span> </h1>
+          </div>
+          <div className={styles.box2_Div3}>
+            <p></p>
+          </div>
+          <div className={styles.box2_Div4}>
+            <p>{fetchData[0].address.city} - { fetchData[0].address.line1}</p>
+          </div>
+          <div className={styles.box2_Div5}>
+              <Rating  size="Small" name="half-rating-read" defaultValue={fetchData[0].starRating} precision={0.5} readOnly/>
+           
+          </div>
+           <div className={styles.box2_Div6}>
+                    <div><span>{ fetchData[0].starRating}</span>/5</div>
+                    {fetchData[0].starRating > 3 ? <p></p> : fetchData[0].starRating <= 4 ? <p>Good</p> : fetchData[0].starRating <= 5 ? <p>Excellent</p>:<p>Extra Ordinary</p>}
+          </div>
+          <hr />
+          <h2>Price Summary</h2>
+          
+          <div className={styles.box2_Div8}>
+               <p>Average room price per night </p>
+            <span>$ 50</span>
+          </div>
+          <div className={styles.box2_Div7}>
+            
+            <p>Your room price per night </p>
+            <span>$ { ((fetchData[0].location.latitude) % Math.abs(fetchData[0].location.longitude)).toFixed(2)}</span>
+          </div>
+          <hr />
+            <div className={styles.box2_Div9}>
+            
+            <p>Tax & fees </p>
+            <span>$ { tax}</span>
+          </div>
+          <div className={styles.box2_Div10}>
+            <div className={styles.box2_Div10_Div}>
+              <p>Due now </p>
+            <span>$ { tax+Number(((fetchData[0].location.latitude) % Math.abs(fetchData[0].location.longitude)).toFixed(2))}</span>
+            </div>
+            <hr />
+            <p> Book with confidence We price match!</p>
+            </div>
+          
+        </Box>
       </Box>
       <Box className={styles.RefNo}>
         <p>Customer service reference number: 6335564271</p>
