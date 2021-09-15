@@ -10,24 +10,25 @@ import axios from "axios";
 import { useState } from "react";
 import Rating from "@material-ui/lab/Rating";
 import { useSelector } from "react-redux";
- var obj={
-   "FirstName":"",
-   "LastName":"",
-   "Email":"",
-   "Confirm Email":"",
-   "Phone Number":"",
-   "Firstname In card details":"",
-   "Lastname In card details":"",
-   "Card Number":"",
-   "Expiration Month":"",
-   "Expiration Year":"",
-   "CVV":"",
-   "Address 1":"",
-   "Country":"",
-   "City":"",
-   "State":"",
-   "Zip code":""
- }
+
+var obj = {
+  FirstName: "",
+  LastName: "",
+  Email: "",
+  "Confirm Email": "",
+  "Phone Number": "",
+  "Firstname In card details": "",
+  "Lastname In card details": "",
+  "Card Number": "",
+  "Expiration Month": "",
+  "Expiration Year": "",
+  CVV: "",
+  "Address 1": "",
+  Country: "",
+  City: "",
+  State: "",
+  "Zip code": "",
+};
 export const Payment = () => {
   const styles = useStyles();
   const [fetchData, setFetchData] = useState([]);
@@ -39,11 +40,11 @@ export const Payment = () => {
   const [formdata, setFormdata] = useState(obj);
   const today = new Date(Date.now()).toDateString();
   const threedaysAfter = new Date(Date.now() + 100000000).toDateString();
-  const Loginstatus=useSelector((state)=>state.Loginstatus)
+  const Loginstatus = useSelector((state) => state.Loginstatus);
 
   useEffect(() => {
     getData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // console.log(fetchData);
   function getData() {
@@ -88,26 +89,24 @@ export const Payment = () => {
     const { name, value } = e.target;
     setFormdata({ ...formdata, [name]: value });
   }
-  function validateForm(formdata){
-    let arr=[]
-    for(let key in formdata){
-      if(formdata[key].length===0){
+  function validateForm(formdata) {
+    let arr = [];
+    for (let key in formdata) {
+      if (formdata[key].length === 0) {
         arr.push(key);
       }
     }
-    return arr
+    return arr;
   }
   function handleBook() {
-    let f=validateForm(formdata)
-    console.log("f",f)
-    if(f.length===0){
-    setBooked(true);
-    }
-    else if(Loginstatus===false){
-      alert(" Please Login  to your account and Book a hotel ")
-    }
-    else {
-      alert(`Please fill ${f.join(", ")} details and Book a hotel ` )
+    let f = validateForm(formdata);
+    console.log("f", f);
+    if (f.length === 0) {
+      setBooked(true);
+    } else if (Loginstatus === false) {
+      alert("Please Login to your account and Book a hotel ");
+    } else {
+      alert(`Please fill ${f.join(", ")} details and Book a hotel `);
     }
   }
   if (isloading) {
@@ -147,7 +146,7 @@ export const Payment = () => {
       </div>
     );
   }
-  
+
   return (
     <Box className={styles.Mainpage}>
       <Box className={styles.page}>
