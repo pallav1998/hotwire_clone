@@ -26,16 +26,16 @@ const sortCom = [
     value: "Best Match",
   },
   {
-    value: "Price(low to hight)",
+    value: "Price(low to high)",
   },
   {
     value: "Price(high to low)",
   },
   {
-    value: "Hotel class(hight to low)",
+    value: "Hotel class(high to low)",
   },
   {
-    value: "Hotel class(low to hight)",
+    value: "Hotel class(low to high)",
   },
 ];
 const priceRange = ["Any"];
@@ -65,7 +65,12 @@ export default function SearchHotel() {
   const [backC1, setBackC1] = useState();
   const [backC2, setBackC2] = useState();
   const [inpdata, setInpData] = useState("Philipsburg");
+  const [date1,setDate1]=useState("")
+  const [date2,setDate2]=useState("")
   const [mainData1, setMainData1] = useState([]);
+  
+  const [storedData, setStoreddata] = useState([]);
+
   const [loading, setloading] = useState(true);
   const history = useHistory();
   const [viewport, setViewport] = useState({
@@ -75,18 +80,73 @@ export default function SearchHotel() {
   });
 
   // console.log(mainData1,"mdata1")
-
+  function Pricesorting(inp){
+    let data=storedData
+    if(inp==="Price(low to high)"){
+      data=data.sort((a,b)=>a.price-b.price);
+    }
+    else if(inp==="Price(high to low)"){
+      data=data.sort((a,b)=>b.price-a.price);
+    }
+    else if(inp==="Best Match"){
+      data=storedData
+    }
+    else if(inp==="Hotel class(low to high)"){
+      data=data.sort((a,b)=>a.starRating-b.starRating)
+    }
+    else if(inp==="Hotel class(high to low)"){
+      data=data.sort((a,b)=>b.starRating-a.starRating)
+    }
+    setMainData1(data)
+    // data.sort((a,b)=>a.pr)
+  }
+  function sameThings(number){
+    let data=storedData
+    let changedData=[]
+    for(let i=0;i<data.length;i++){
+      if(data[i].starRating==number){
+        changedData.push(data[i])
+      }
+    }
+    return changedData    
+  }
+  function Starsorting(inp){
+    let data=mainData1
+    let f=inp[0]
+    if(f==="A"){
+      data=storedData
+    }
+    else if(f==="1"){
+      data=sameThings(1)
+    }
+    else if(f==="2"){
+      data=sameThings(2)
+    }
+    else if(f==="3"){
+      data=sameThings(3)
+    }
+    else if(f==="4"){
+      data=sameThings(4)
+    }
+   else if(f==="5"){
+     data=sameThings(5)
+   }
+    setMainData1(data)
+  }
   const handleChangeSort = (event) => {
     setSort(event.target.value);
+    Pricesorting(event.target.value)
   };
   const handleChangePriceRange = (event) => {
     setPrice(event.target.value);
+
   };
   const handleChangeHotelClass = (event) => {
     setHotelClass1(event.target.value);
+    Starsorting(event.target.value)
   };
 
-  useEffect(() => {
+  useEffect( () => {
     // axios.get("http://localhost:3001/data")
     //   .then((data) => {
     //     var mainData=data.data
@@ -97,13 +157,25 @@ export default function SearchHotel() {
     //     setloading(false)
     // })
     console.log("running");
-    getData();
-  }, []);
+    let running=async ()=>{
+      await getData();
+      let arr=mainData1
+    for(let i=0;i<arr.length;i++){
+      arr[i].price=(
+        arr.location.latitudarr % Math.abs(arr.location.longitude)
+      ).toFixed(2)
+    }
+    // console.log(arr)
+    }
+    running()
+      }, []);
   function getData() {
     let arr = [];
     axios.get("http://localhost:3001/search").then((res1) => {
       // console.log(res1.data,"searchdata")
       setInpData(res1.data.destination);
+      setDate1(res1.data.checkin)
+      setDate2(res1.data.checkout)
       axios
         .get(`http://localhost:3001/data?address.city=${res1.data.destination}`)
         .then(({ data }) => {
@@ -123,7 +195,14 @@ export default function SearchHotel() {
               // res.data=res.data.filter((item)=>item.address.country==="USA")
               // console.log(res.data,"res.data  ")
               arr = [...arr, ...f];
-
+              // console.log(arr,"arr in promise")
+              for(let i=0;i<arr.length;i++){
+                arr[i].price=Number((
+                  arr[i].location.latitude % Math.abs(arr[i].location.longitude)
+                ).toFixed(2))
+              }
+              console.log(arr,"after promise")
+              setStoreddata(arr)
               setMainData1(arr);
               // setViewport({...arr[0].location,zoom:12})
               setloading(false);
@@ -141,38 +220,50 @@ export default function SearchHotel() {
     //  `http://localhost:3001/data?city=chicago`
   }
   const handleSearch = (e) => {
-    // axios.get("http://localhost:3001/data")
-    //   .then((data) => {
-    //     var mainData = data.data
-    //     const updateData = mainData.filter((e) => inpdata === e.address.city)
-    //     console.log(updateData)
-    //     setMainData1(updateData)
+   
+    // let arr = [];
+    const payload = {
+        "destination": inpdata,
+        "checkin": date1,
+        "checkout": date2,
+        "guest": "5",
+        "country": "USA"
+      }
+    
+    axios.post("http://localhost:3001/search",payload)
+    .then((res)=>{
+      // console.log("succesful")
+      // getData();
+      setMainData1([...mainData1].reverse())
+      // console.log(mainData1)
+    })
+    .catch((er)=>{
+      console.log(er)
+    })
+   
+    // axios
+    //   .get(`http://localhost:3001/data?address.city=${inpdata}`)
+    //   .then(({ data }) => {
+    //     console.log(data, "citydata");
+    //     arr = [...data];
+    //     axios
+    //       .get(`http://localhost:3001/data?address.country=USA`)
+    //       .then((res) => {
+    //         // console.log(`http://localhost:3001/data?address.country=${res1.data.country}`)
+    //         // console.log(res.data,"country data")
+    //         arr = [...arr, ...res.data];
+
+    //         setMainData1(arr);
+    //         // setViewport({...arr[0].location,zoom:12})
+    //         setloading(false);
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
     //   })
-    let arr = [];
-
-    axios
-      .get(`http://localhost:3001/data?address.city=${inpdata}`)
-      .then(({ data }) => {
-        console.log(data, "citydata");
-        arr = [...data];
-        axios
-          .get(`http://localhost:3001/data?address.country=USA`)
-          .then((res) => {
-            // console.log(`http://localhost:3001/data?address.country=${res1.data.country}`)
-            // console.log(res.data,"country data")
-            arr = [...arr, ...res.data];
-
-            setMainData1(arr);
-            // setViewport({...arr[0].location,zoom:12})
-            setloading(false);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   };
   function handleClick(id) {
     const payload = {
@@ -204,7 +295,7 @@ export default function SearchHotel() {
               }}
               placeholder="Where would you like to stay?"
               value={inpdata}
-              onKeyPress={handleSearch}
+              // onKeyPress={handleSearch}
             />
             <IconButton
               type="submit"
@@ -219,13 +310,13 @@ export default function SearchHotel() {
             <IconButton className="">
               <DateRangeIcon fontSize="small" className="Calender" />
             </IconButton>
-            <input className="inp2" type="date" />
+            <input className="inp2" type="date" value={date1} onChange={(e)=>setDate1(e.target.value)}/>
           </Paper>
           <Paper className="paper2">
             <IconButton className="">
               <DateRangeIcon fontSize="small" className="Calender" />
             </IconButton>
-            <input className="inp2" type="date" />
+            <input className="inp2" type="date" value={date2} onChange={(e)=>setDate2(e.target.value)}/>
           </Paper>
 
           <button
@@ -312,7 +403,7 @@ export default function SearchHotel() {
             </TextField>
           </div>
           <div>
-            <TextField
+            {/* <TextField
               id="standard-select-sort"
               select
               label="Price range"
@@ -325,13 +416,13 @@ export default function SearchHotel() {
                   {option}
                 </MenuItem>
               ))}
-            </TextField>
+            </TextField> */}
           </div>
           <div>
             <TextField
               id="standard-select-sort"
               select
-              label="Price range"
+              label="Star range"
               value={hotelClass1}
               onChange={handleChangeHotelClass}
               variant="outlined"
@@ -429,9 +520,7 @@ export default function SearchHotel() {
                     <div className="Price">
                       {" "}
                       <span>$</span>
-                      {(
-                        e.location.latitude % Math.abs(e.location.longitude)
-                      ).toFixed(2)}
+                      {e.price}
                       <p>per night</p>
                     </div>
                   </div>

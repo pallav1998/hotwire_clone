@@ -9,7 +9,25 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import Rating from "@material-ui/lab/Rating";
-
+import { useSelector } from "react-redux";
+ var obj={
+   "FirstName":"",
+   "LastName":"",
+   "Email":"",
+   "Confirm Email":"",
+   "Phone Number":"",
+   "Firstname In card details":"",
+   "Lastname In card details":"",
+   "Card Number":"",
+   "Expiration Month":"",
+   "Expiration Year":"",
+   "CVV":"",
+   "Address 1":"",
+   "Country":"",
+   "City":"",
+   "State":"",
+   "Zip code":""
+ }
 export const Payment = () => {
   const styles = useStyles();
   const [fetchData, setFetchData] = useState([]);
@@ -18,15 +36,16 @@ export const Payment = () => {
   const [iserror, setIserror] = useState(false);
   const [checkInDetails, setCheckinDetails] = useState({});
   const [booked, setBooked] = useState(false);
-  const [formdata, setFormdata] = useState({});
+  const [formdata, setFormdata] = useState(obj);
   const today = new Date(Date.now()).toDateString();
   const threedaysAfter = new Date(Date.now() + 100000000).toDateString();
+  const Loginstatus=useSelector((state)=>state.Loginstatus)
 
   useEffect(() => {
     getData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(fetchData);
+  // console.log(fetchData);
   function getData() {
     axios
       .get("http://localhost:3001/hotelsearch")
@@ -54,7 +73,7 @@ export const Payment = () => {
     axios
       .get(`http://localhost:3001/data?hotelId=${id}`)
       .then(({ data }) => {
-        console.log(data, "resultdata");
+        // console.log(data, "resultdata");
 
         var update = data;
         setFetchData(update);
@@ -65,7 +84,32 @@ export const Payment = () => {
         setIserror(true);
       });
   }
-
+  function handleForm(e) {
+    const { name, value } = e.target;
+    setFormdata({ ...formdata, [name]: value });
+  }
+  function validateForm(formdata){
+    let arr=[]
+    for(let key in formdata){
+      if(formdata[key].length===0){
+        arr.push(key);
+      }
+    }
+    return arr
+  }
+  function handleBook() {
+    let f=validateForm(formdata)
+    console.log("f",f)
+    if(f.length===0){
+    setBooked(true);
+    }
+    else if(Loginstatus===false){
+      alert(" Please Login  to your account and Book a hotel ")
+    }
+    else {
+      alert(`Please fill ${f.join(", ")} details and Book a hotel ` )
+    }
+  }
   if (isloading) {
     return (
       <h1 style={{ marginTop: "100px", textAlign: "center" }}>loading...</h1>
@@ -103,13 +147,7 @@ export const Payment = () => {
       </div>
     );
   }
-  function handleForm(e) {
-    const { name, value } = e.target;
-    setFormdata({ ...formdata, [name]: value });
-  }
-  function handleBook() {
-    setBooked(true);
-  }
+  
   return (
     <Box className={styles.Mainpage}>
       <Box className={styles.page}>
@@ -122,7 +160,7 @@ export const Payment = () => {
             <Box>
               <TextField
                 onChange={handleForm}
-                name="firstName"
+                name="FirstName"
                 id="outlined-error-helper-text"
                 label="First Name"
                 // helperText="Required"
@@ -130,7 +168,7 @@ export const Payment = () => {
                 required
               />
               <TextField
-                name="lastName"
+                name="LastName"
                 onChange={handleForm}
                 id="outlined-error-helper-text"
                 label="Last Name"
@@ -141,6 +179,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Email"
+                name="Email"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -148,12 +188,16 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Confirm Email"
+                name="Confirm Email"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
               />
               <TextField
                 id="outlined-error-helper-text"
+                name="Phone Number"
+                onChange={handleForm}
                 label="Phone Number"
                 type="Number"
                 // helperText="Required"
@@ -176,6 +220,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="First Name"
+                name="Firstname In card details"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -183,6 +229,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Last Name"
+                name="Lastname In card details"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -190,6 +238,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Card Number"
+                name="Card Number"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -200,6 +250,8 @@ export const Payment = () => {
                   label="Exp MM"
                   type="number"
                   max="12"
+                  name="Expiration Month"
+                  onChange={handleForm}
                   // helperText="Required"
                   variant="outlined"
                   required
@@ -207,6 +259,8 @@ export const Payment = () => {
                 <TextField
                   id="outlined-error-helper-text"
                   label="Exp YYYY"
+                  name="Expiration Year"
+                  onChange={handleForm}
                   // helperText="Required"
                   variant="outlined"
                   required
@@ -214,6 +268,8 @@ export const Payment = () => {
                 <TextField
                   id="outlined-error-helper-text"
                   label="CVV"
+                  name="CVV"
+                  onChange={handleForm}
                   // helperText="Required"
                   variant="outlined"
                   required
@@ -226,6 +282,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Address 1"
+                name="Address 1"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -239,6 +297,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="Country"
+                name="Country"
+                onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -246,6 +306,8 @@ export const Payment = () => {
               <TextField
                 id="outlined-error-helper-text"
                 label="City or Town"
+                onChange={handleForm}
+                name="City"
                 // helperText="Required"
                 variant="outlined"
                 required
@@ -254,6 +316,8 @@ export const Payment = () => {
                 <TextField
                   id="outlined-error-helper-text"
                   label="State"
+                  onChange={handleForm}
+                  name="State"
                   // helperText="Required"
                   variant="outlined"
                   required
@@ -261,6 +325,8 @@ export const Payment = () => {
                 <TextField
                   id="outlined-error-helper-text"
                   label="Zip code"
+                  onChange={handleForm}
+                  name="Zip code"
                   // helperText="Required"
                   variant="outlined"
                   required
