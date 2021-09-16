@@ -74,4 +74,4 @@ json-server db.json --port 3001
 - [@Noor Muhammed](https://github.com/NOORMUHAMM)
 - [@Mahesh Gupta ](https://github.com/maheshguptha49)
 - [@Pallav jain](https://github.com/pallav1998)
-- [@Piyush kumar](https://github.com/omkarvgavade)
+- [@Piyush kumar](https://github.com/iampiyushkr)
