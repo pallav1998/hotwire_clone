@@ -15,7 +15,7 @@ export const useStyles = makeStyles({
     display: "flex",
     // justifyContent: "flex-start",
     // border: "1px solid black",
-    marginRight: "26vw",
+    marginRight: "23vw",
     "&>h6": {
       margin: "5px 14px",
       fontSize: "16px",
