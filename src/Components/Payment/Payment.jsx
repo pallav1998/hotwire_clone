@@ -182,6 +182,7 @@ export const Payment = () => {
                 onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
+                defaultValue="jain@gmail.com"
                 required
               />
               <TextField
@@ -190,6 +191,7 @@ export const Payment = () => {
                 name="Confirm Email"
                 onChange={handleForm}
                 // helperText="Required"
+                defaultValue="jain@gmail.com"
                 variant="outlined"
                 required
               />
@@ -240,6 +242,7 @@ export const Payment = () => {
                 name="Card Number"
                 onChange={handleForm}
                 // helperText="Required"
+                defaultValue="1234-5678-9012-3456"
                 variant="outlined"
                 required
               />
@@ -252,6 +255,7 @@ export const Payment = () => {
                   name="Expiration Month"
                   onChange={handleForm}
                   // helperText="Required"
+                  defaultValue="09"
                   variant="outlined"
                   required
                 />
@@ -260,7 +264,10 @@ export const Payment = () => {
                   label="Exp YYYY"
                   name="Expiration Year"
                   onChange={handleForm}
+                  max="2030"
+                  min="2010"
                   // helperText="Required"
+                  defaultValue="2021"
                   variant="outlined"
                   required
                 />
@@ -270,6 +277,7 @@ export const Payment = () => {
                   name="CVV"
                   onChange={handleForm}
                   // helperText="Required"
+                  defaultValue="123"
                   variant="outlined"
                   required
                 />
