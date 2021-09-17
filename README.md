@@ -29,7 +29,6 @@ json-server db.json --port 3001
 
 ## Technologies Used
 
-<h2 align="left">🛠 Languages and Tools:</h2>
 <p align="center">
   <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="80" height="80"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="80" height="80"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> 
