@@ -91,16 +91,16 @@ export const LandingPage = () => {
       <div className={styles.container} style={{ marginTop: "65px" }}>
         <div className={styles.topBanner}>
           <span class="title">
-            <i class="fab fa-hotjar" style={{ "margin-right": "10px" }}></i>Want
-            to stay in an expensive hotel for cheap?
-            <strong style={{ "font-weight": "10", marginLeft: "10px" }}>
-              Yeah, you do.
+            <i class="fab fa-hotjar" style={{ "margin-right": "10px" }}></i>
+            SURPRISE SAVINGS: &nbsp;
+            <strong style={{ "font-weight": "20" }}>
+              Extra $10 off Hot Rate® bookings of $100+ in the app. Book by
+              9/17¹ &nbsp;
             </strong>
             <a
               class="link-text"
               href="https://www.hotwire.com/bookbeyond"
               rel="noopener noreferrer"
-              target="_blank"
             >
               Find out how
             </a>
@@ -146,13 +146,13 @@ export const LandingPage = () => {
                         name="destination"
                         value={destination}
                         onChange={(e) => onInputchange(e)}
-                        placeholder="ex:207-2074444"
+                        placeholder="Where would you stay?"
                         style={{
                           border: "none",
                           background: "none",
-                          fontSize: "20px",
+                          fontSize: "15px",
                           outline: "none",
-                          marginLeft: "20px",
+                          marginLeft: "10px",
                           marginTop: "5px",
                           paddingBottom: "5px",
                         }}
@@ -186,13 +186,13 @@ export const LandingPage = () => {
                         type="text"
                         name="guest"
                         value={guest}
-                        placeholder="ex:207-2074444"
+                        placeholder="1 Room, 2 Adults"
                         style={{
                           border: "none",
-                          background: "none",
-                          fontSize: "20px",
+                          background: "none", 
+                          fontSize: "16px",
                           outline: "none",
-                          marginLeft: "20px",
+                          marginLeft: "10px",
                           marginTop: "5px",
                           paddingBottom: "5px",
                         }}
@@ -233,10 +233,10 @@ export const LandingPage = () => {
                         }}
                       />
                     </i>
-                  </div>{" "}
+                  </div>
                   <br />
-                  <label>Pick-up date</label>{" "}
-                  <label style={{ marginLeft: "40px" }}>Pick-up time</label>{" "}
+                  <label>Pick-up date</label>
+                  <label style={{ marginLeft: "40px" }}>Pick-up time</label>
                   <br />
                   <input
                     type="date"
@@ -249,7 +249,7 @@ export const LandingPage = () => {
                     name="checkout"
                     value={checkout}
                     onChange={(e) => onInputchange(e)}
-                  />{" "}
+                  />
                   <br /> <br />
                   <label>Guest</label> <br />
                   <div className={styles.input}>
@@ -308,7 +308,7 @@ export const LandingPage = () => {
                         }}
                       />
                     </i>
-                  </div>{" "}
+                  </div>
                   <br />
                   <label>Fly to</label>
                   <div className={styles.input}>
@@ -407,7 +407,7 @@ export const LandingPage = () => {
                         }}
                       />
                     </i>
-                  </div>{" "}
+                  </div>
                   <br />
                   <label>Fly to</label>
                   <div className={styles.input}>
@@ -433,9 +433,9 @@ export const LandingPage = () => {
                         }}
                       />
                     </i>
-                  </div>{" "}
+                  </div>
                   <br />
-                  <label>Departing</label>{" "}
+                  <label>Departing</label>
                   <label style={{ marginLeft: "70px" }}>Returning</label> <br />
                   <input
                     type="date"
@@ -448,7 +448,7 @@ export const LandingPage = () => {
                     name="checkout"
                     value={checkout}
                     onChange={(e) => onInputchange(e)}
-                  />{" "}
+                  />
                   <br /> <br />
                   <input
                     type="time"
@@ -494,17 +494,17 @@ export const LandingPage = () => {
             )}
           </div>
 
-          <div className={styles.learn_more}>
+          {/* <div className={styles.learn_more}>
             <img
               src="https://tpc.googlesyndication.com/simgad/16159382514288190354?"
               alt="loading"
               style={{ height: "40px", marginLeft: "50px", marginTop: "10px" }}
             />
-            <span style={{ marginTop: "18px", marginRight: "60px" }}>
+            <span style={{ marginTop: "10px", marginRight: "60px" }}>
               Give the world a shot
               <button className={styles.laernButton}>Learn more</button>
             </span>
-          </div>
+          </div> */}
         </div>
         <div className={styles.whyChoose}>
           <img
@@ -567,13 +567,12 @@ export const LandingPage = () => {
           <div>
             <i class="far fa-envelope"></i>
             <span className={styles.emailHeading}>
-              {" "}
               Unlock an extra $10 off your next Hot Rate® Hotel when you sign up
               for email!
             </span>
           </div>
           <div className={styles.emailInput}>
-            <input type="text" />{" "}
+            <input type="text" />
             <button className={styles.btn} style={{ marginTop: "-10px" }}>
               Subscribe
             </button>
