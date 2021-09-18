@@ -40,11 +40,11 @@ export const Payment = () => {
   const [formdata, setFormdata] = useState(obj);
   const today = new Date(Date.now()).toDateString();
   const threedaysAfter = new Date(Date.now() + 100000000).toDateString();
-  const Loginstatus=useSelector((state)=>state.Loginstatus)
+  const Loginstatus = useSelector((state) => state.Loginstatus);
 
   useEffect(() => {
     getData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // console.log(fetchData);
   function getData() {
@@ -89,18 +89,18 @@ export const Payment = () => {
     const { name, value } = e.target;
     setFormdata({ ...formdata, [name]: value });
   }
-  function validateForm(formdata){
-    let arr=[]
-    for(let key in formdata){
-      if(formdata[key].length===0){
+  function validateForm(formdata) {
+    let arr = [];
+    for (let key in formdata) {
+      if (formdata[key].length === 0) {
         arr.push(key);
       }
     }
-    return arr
+    return arr;
   }
   function handleBook() {
     let f=validateForm(formdata)
-    console.log("f",f)
+    // console.log("f",f)
     
      if(Loginstatus===false){
       alert(" Please Login  to your account and Book a hotel ")
@@ -151,7 +151,7 @@ export const Payment = () => {
       </div>
     );
   }
-  
+
   return (
     <Box className={styles.Mainpage}>
       <Box className={styles.page}>
@@ -187,6 +187,7 @@ export const Payment = () => {
                 onChange={handleForm}
                 // helperText="Required"
                 variant="outlined"
+                // defaultValue="jain@gmail.com"
                 required
               />
               <TextField
@@ -195,6 +196,7 @@ export const Payment = () => {
                 name="Confirm Email"
                 onChange={handleForm}
                 // helperText="Required"
+                // defaultValue="jain@gmail.com"
                 variant="outlined"
                 required
               />
@@ -245,6 +247,7 @@ export const Payment = () => {
                 name="Card Number"
                 onChange={handleForm}
                 // helperText="Required"
+                // defaultValue="1234-5678-9012-3456"
                 variant="outlined"
                 required
               />
@@ -257,6 +260,7 @@ export const Payment = () => {
                   name="Expiration Month"
                   onChange={handleForm}
                   // helperText="Required"
+                  // defaultValue="09"
                   variant="outlined"
                   required
                 />
@@ -265,7 +269,10 @@ export const Payment = () => {
                   label="Exp YYYY"
                   name="Expiration Year"
                   onChange={handleForm}
+                  max="2030"
+                  min="2010"
                   // helperText="Required"
+                  // defaultValue="2021"
                   variant="outlined"
                   required
                 />
@@ -275,6 +282,7 @@ export const Payment = () => {
                   name="CVV"
                   onChange={handleForm}
                   // helperText="Required"
+                  // defaultValue="123"
                   variant="outlined"
                   required
                 />

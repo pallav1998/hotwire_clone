@@ -39,7 +39,7 @@ const sortCom = [
     value: "Hotel class(low to high)",
   },
 ];
-const priceRange = ["Any"];
+// const priceRange = ["Any"];
 
 const hotelClass = ["Any", "5-Star", "4-Star", "3-Star", "2-Star", "1-Star"];
 
@@ -57,7 +57,6 @@ const hotelClass = ["Any", "5-Star", "4-Star", "3-Star", "2-Star", "1-Star"];
 // };
 export default function SearchHotel() {
   const [sort, setSort] = useState("Best Match");
-  const [price, setPrice] = useState("Any");
   const [hotelClass1, setHotelClass1] = useState("Any");
   const [bottom1, setBottom1] = useState("white");
   const [bottom2, setBottom2] = useState();
@@ -66,10 +65,10 @@ export default function SearchHotel() {
   const [backC1, setBackC1] = useState();
   const [backC2, setBackC2] = useState();
   const [inpdata, setInpData] = useState("Philipsburg");
-  const [date1,setDate1]=useState("")
-  const [date2,setDate2]=useState("")
+  const [date1, setDate1] = useState("");
+  const [date2, setDate2] = useState("");
   const [mainData1, setMainData1] = useState([]);
-  
+
   const [storedData, setStoreddata] = useState([]);
 
   const [loading, setloading] = useState(true);
@@ -81,70 +80,60 @@ export default function SearchHotel() {
   });
 
   // console.log(mainData1,"mdata1")
-  function Pricesorting(inp){
-    let data=storedData
-    if(inp==="Price(low to high)"){
-      data=data.sort((a,b)=>a.price-b.price);
+  function Pricesorting(inp) {
+    let data = storedData;
+    if (inp === "Price(low to high)") {
+      data = data.sort((a, b) => a.price - b.price);
+    } else if (inp === "Price(high to low)") {
+      data = data.sort((a, b) => b.price - a.price);
+    } else if (inp === "Best Match") {
+      data = storedData;
+    } else if (inp === "Hotel class(low to high)") {
+      data = data.sort((a, b) => a.starRating - b.starRating);
+    } else if (inp === "Hotel class(high to low)") {
+      data = data.sort((a, b) => b.starRating - a.starRating);
     }
-    else if(inp==="Price(high to low)"){
-      data=data.sort((a,b)=>b.price-a.price);
-    }
-    else if(inp==="Best Match"){
-      data=storedData
-    }
-    else if(inp==="Hotel class(low to high)"){
-      data=data.sort((a,b)=>a.starRating-b.starRating)
-    }
-    else if(inp==="Hotel class(high to low)"){
-      data=data.sort((a,b)=>b.starRating-a.starRating)
-    }
-    setMainData1(data)
+    setMainData1(data);
     // data.sort((a,b)=>a.pr)
   }
-  function sameThings(number){
-    let data=storedData
-    let changedData=[]
-    for(let i=0;i<data.length;i++){
-      if(data[i].starRating==number){
-        changedData.push(data[i])
+  function sameThings(number) {
+    let data = storedData;
+    let changedData = [];
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].starRating === number) {
+        changedData.push(data[i]);
       }
     }
-    return changedData    
+    return changedData;
   }
-  function Starsorting(inp){
-    let data=mainData1
-    let f=inp[0]
-    if(f==="A"){
-      data=storedData
+  function Starsorting(inp) {
+    let data = mainData1;
+    let f = inp[0];
+    if (f === "A") {
+      data = storedData;
+    } else if (f === "1") {
+      data = sameThings(1);
+    } else if (f === "2") {
+      data = sameThings(2);
+    } else if (f === "3") {
+      data = sameThings(3);
+    } else if (f === "4") {
+      data = sameThings(4);
+    } else if (f === "5") {
+      data = sameThings(5);
     }
-    else if(f==="1"){
-      data=sameThings(1)
-    }
-    else if(f==="2"){
-      data=sameThings(2)
-    }
-    else if(f==="3"){
-      data=sameThings(3)
-    }
-    else if(f==="4"){
-      data=sameThings(4)
-    }
-   else if(f==="5"){
-     data=sameThings(5)
-   }
-    setMainData1(data)
+    setMainData1(data);
   }
   const handleChangeSort = (event) => {
     setSort(event.target.value);
-    Pricesorting(event.target.value)
+    Pricesorting(event.target.value);
   };
-  const handleChangePriceRange = (event) => {
-    setPrice(event.target.value);
-
-  };
+  // const handleChangePriceRange = (event) => {
+  //   setPrice(event.target.value);
+  // };
   const handleChangeHotelClass = (event) => {
     setHotelClass1(event.target.value);
-    Starsorting(event.target.value)
+    Starsorting(event.target.value);
   };
 
   useEffect( () => {
@@ -157,26 +146,27 @@ export default function SearchHotel() {
     //     setMainData1(updateData)
     //     setloading(false)
     // })
-    console.log("running");
-    let running=async ()=>{
+    // console.log("running");
+    let running = async () => {
       await getData();
-      let arr=mainData1
-    for(let i=0;i<arr.length;i++){
-      arr[i].price=(
-        arr.location.latitudarr % Math.abs(arr.location.longitude)
-      ).toFixed(2)
-    }
-    // console.log(arr)
-    }
-    running()
-      }, []);
+      let arr = mainData1;
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].price = (
+          arr.location.latitudarr % Math.abs(arr.location.longitude)
+        ).toFixed(2);
+      }
+      // console.log(arr)
+    };
+    running();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   function getData() {
     let arr = [];
     axios.get(`${link}/search`).then((res1) => {
       // console.log(res1.data,"searchdata")
       setInpData(res1.data.destination);
-      setDate1(res1.data.checkin)
-      setDate2(res1.data.checkout)
+      setDate1(res1.data.checkin);
+      setDate2(res1.data.checkout);
       axios
         .get(`${link}/data?address.city=${res1.data.destination}`)
         .then(({ data }) => {
@@ -197,13 +187,16 @@ export default function SearchHotel() {
               // console.log(res.data,"res.data  ")
               arr = [...arr, ...f];
               // console.log(arr,"arr in promise")
-              for(let i=0;i<arr.length;i++){
-                arr[i].price=Number((
-                  arr[i].location.latitude % Math.abs(arr[i].location.longitude)
-                ).toFixed(2))
+              for (let i = 0; i < arr.length; i++) {
+                arr[i].price = Number(
+                  (
+                    arr[i].location.latitude %
+                    Math.abs(arr[i].location.longitude)
+                  ).toFixed(2)
+                );
               }
-              console.log(arr,"after promise")
-              setStoreddata(arr)
+              console.log(arr, "after promise");
+              setStoreddata(arr);
               setMainData1(arr);
               // setViewport({...arr[0].location,zoom:12})
               setloading(false);
@@ -221,7 +214,6 @@ export default function SearchHotel() {
     //  `${link}/data?city=chicago`
   }
   const handleSearch = (e) => {
-   
     // let arr = [];
     const payload = {
         "destination": inpdata,
@@ -311,13 +303,23 @@ export default function SearchHotel() {
             <IconButton className="">
               <DateRangeIcon fontSize="small" className="Calender" />
             </IconButton>
-            <input className="inp2" type="date" value={date1} onChange={(e)=>setDate1(e.target.value)}/>
+            <input
+              className="inp2"
+              type="date"
+              value={date1}
+              onChange={(e) => setDate1(e.target.value)}
+            />
           </Paper>
           <Paper className="paper2">
             <IconButton className="">
               <DateRangeIcon fontSize="small" className="Calender" />
             </IconButton>
-            <input className="inp2" type="date" value={date2} onChange={(e)=>setDate2(e.target.value)}/>
+            <input
+              className="inp2"
+              type="date"
+              value={date2}
+              onChange={(e) => setDate2(e.target.value)}
+            />
           </Paper>
 
           <button

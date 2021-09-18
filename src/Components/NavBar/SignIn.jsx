@@ -67,6 +67,7 @@ export const SignIn = () => {
                 id="outlined-basic"
                 label="Email"
                 variant="outlined"
+                defaultValue="jain@gmail.com"
               />
               <TextField
                 value={password}
@@ -74,6 +75,7 @@ export const SignIn = () => {
                 id="outlined-basic"
                 label="Password"
                 variant="outlined"
+                defaultValue="123"
               />
             </Box>
             <Box className={styles.SignInBox4}>
