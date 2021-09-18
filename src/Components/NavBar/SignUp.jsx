@@ -16,6 +16,7 @@ import { nanoid } from "nanoid";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getUsers } from "../../ReduxStore/action";
+import { link } from "../../utils/Localstorage";
 
 export const SignUp = () => {
   const [signup, setSignup] = useState(false);
@@ -34,7 +35,7 @@ export const SignUp = () => {
     // alert("Thank For Filling The Details");
     console.log("payload:", payload);
     axios
-      .post("http://localhost:3001/userData", payload)
+      .post(`${link}/userData`, payload)
       .then((res) => {
         dispatch(getUsers(res.data));
       })

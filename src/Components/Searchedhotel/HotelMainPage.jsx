@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import axios from "axios";
 import "./Hotel.css";
+import { link } from "../../utils/Localstorage";
 
 export default function HotelMainPage() {
   useEffect(() => {
-    axios.get(" http://localhost:3001/data").then((data) => {
+    axios.get(`${link}/data`).then((data) => {
       console.log(data.data);
     });
   }, []);

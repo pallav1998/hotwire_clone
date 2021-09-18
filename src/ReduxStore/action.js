@@ -1,4 +1,5 @@
 import axios from "axios";
+import { link } from "../utils/Localstorage";
 import {
   GETDETAILS,
   ADDUSERDETAILS,
@@ -31,7 +32,7 @@ export const UpdateRunningUser = (payload) => {
 export const loginUser = ({ email, password }) => {
   return (dispatch) => {
     axios
-      .get("http://localhost:3001/userData")
+      .get(`${link}/userData`)
       .then(({ data }) => {
         let bool = false;
         for (let i = 0; i < data.length; i++) {

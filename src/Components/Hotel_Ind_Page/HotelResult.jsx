@@ -20,6 +20,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import ShowChartIcon from "@material-ui/icons/ShowChart";
 import { useHistory } from "react-router-dom";
+import { link } from "../../utils/Localstorage";
 
 const useStyles = makeStyles((theme) => ({
   cont2: {
@@ -66,7 +67,7 @@ export function HotelResult() {
   }
   function getData() {
     axios
-      .get("http://localhost:3001/hotelsearch")
+      .get(`${link}/hotelsearch`)
       .then(({ data }) => {
         getData1(data.hotelId);
       })
@@ -78,7 +79,7 @@ export function HotelResult() {
   async function getData1(id) {
     try {
       let { data } = await axios.get(
-        `http://localhost:3001/data?hotelId=${id}`
+        `${link}/data?hotelId=${id}`
       );
       console.log(data, "jajajna");
       setImages(data[0].images);

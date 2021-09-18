@@ -4,6 +4,7 @@ import styles from "./LandingPage.module.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useRef } from "react";
+import { link } from "../../utils/Localstorage";
 
 export const LandingPage = () => {
   const history = useHistory();
@@ -58,7 +59,7 @@ export const LandingPage = () => {
     e.preventDefault();
     const payload = { ...user, country: "USA" };
     axios
-      .put("http://localhost:3001/search", payload)
+      .put(`${link}/search`, payload)
       .then((res) => {
         history.push("/searchHotel");
       })
@@ -77,7 +78,7 @@ export const LandingPage = () => {
     };
 
     axios
-      .put("http://localhost:3001/search", payload)
+      .put(`${link}/search`, payload)
       .then((res) => {
         history.push("/searchHotel");
       })

@@ -10,3 +10,6 @@ export function setInLocal(key, data) {
     localStorage.setItem(key, data);
   }
 }
+
+export const link="https://mahesh-app-test.herokuapp.com"
+

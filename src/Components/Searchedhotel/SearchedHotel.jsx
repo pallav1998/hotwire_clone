@@ -19,6 +19,7 @@ import "./Hotel.css";
 import ReactMapGL from "react-map-gl";
 import { MenuItem } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { link } from "../../utils/Localstorage";
 //import Mapp from './map';
 
 const sortCom = [
@@ -147,7 +148,7 @@ export default function SearchHotel() {
   };
 
   useEffect( () => {
-    // axios.get("http://localhost:3001/data")
+    // axios.get("${link}/data")
     //   .then((data) => {
     //     var mainData=data.data
     //     let updateData = mainData.filter((e) => inpdata === e.address.city)
@@ -171,18 +172,18 @@ export default function SearchHotel() {
       }, []);
   function getData() {
     let arr = [];
-    axios.get("http://localhost:3001/search").then((res1) => {
+    axios.get(`${link}/search`).then((res1) => {
       // console.log(res1.data,"searchdata")
       setInpData(res1.data.destination);
       setDate1(res1.data.checkin)
       setDate2(res1.data.checkout)
       axios
-        .get(`http://localhost:3001/data?address.city=${res1.data.destination}`)
+        .get(`${link}/data?address.city=${res1.data.destination}`)
         .then(({ data }) => {
           // console.log(data,"citydata")
           arr = [...data];
           axios
-            .get(`http://localhost:3001/data`)
+            .get(`${link}/data`)
             .then((res) => {
               // console.log(res.data,"res.data  before")
               let f = [];
@@ -217,7 +218,7 @@ export default function SearchHotel() {
           setloading(false);
         });
     });
-    //  `http://localhost:3001/data?city=chicago`
+    //  `${link}/data?city=chicago`
   }
   const handleSearch = (e) => {
    
@@ -230,7 +231,7 @@ export default function SearchHotel() {
         "country": "USA"
       }
     
-    axios.post("http://localhost:3001/search",payload)
+    axios.post(`${link}/search`,payload)
     .then((res)=>{
       // console.log("succesful")
       // getData();
@@ -242,14 +243,14 @@ export default function SearchHotel() {
     })
    
     // axios
-    //   .get(`http://localhost:3001/data?address.city=${inpdata}`)
+    //   .get(`${link}/data?address.city=${inpdata}`)
     //   .then(({ data }) => {
     //     console.log(data, "citydata");
     //     arr = [...data];
     //     axios
-    //       .get(`http://localhost:3001/data?address.country=USA`)
+    //       .get(`${link}/data?address.country=USA`)
     //       .then((res) => {
-    //         // console.log(`http://localhost:3001/data?address.country=${res1.data.country}`)
+    //         // console.log(`${link}/data?address.country=${res1.data.country}`)
     //         // console.log(res.data,"country data")
     //         arr = [...arr, ...res.data];
 
@@ -269,7 +270,7 @@ export default function SearchHotel() {
     const payload = {
       hotelId: id,
     };
-    axios.put("http://localhost:3001/hotelsearch", payload).then((res) => {
+    axios.put(`${link}/hotelsearch`, payload).then((res) => {
       history.push("/hotelResult");
     });
   }

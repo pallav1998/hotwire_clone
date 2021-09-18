@@ -10,6 +10,7 @@ import axios from "axios";
 import { useState } from "react";
 import Rating from "@material-ui/lab/Rating";
 import { useSelector } from "react-redux";
+import { link } from "../../utils/Localstorage";
  var obj={
    "FirstName":"",
    "LastName":"",
@@ -48,10 +49,10 @@ export const Payment = () => {
   // console.log(fetchData);
   function getData() {
     axios
-      .get("http://localhost:3001/hotelsearch")
+      .get(`${link}/hotelsearch`)
       .then(({ data }) => {
         axios
-          .get("http://localhost:3001/search")
+          .get(`${link}/search`)
           .then((res1) => {
             setCheckinDetails({
               checkIn: res1.data.checkin,
@@ -71,7 +72,7 @@ export const Payment = () => {
   }
   function getData2(id) {
     axios
-      .get(`http://localhost:3001/data?hotelId=${id}`)
+      .get(`${link}/data?hotelId=${id}`)
       .then(({ data }) => {
         // console.log(data, "resultdata");
 
@@ -100,15 +101,18 @@ export const Payment = () => {
   function handleBook() {
     let f=validateForm(formdata)
     console.log("f",f)
-    if(f.length===0){
-    setBooked(true);
-    }
-    else if(Loginstatus===false){
+    
+     if(Loginstatus===false){
       alert(" Please Login  to your account and Book a hotel ")
+      return 
     }
-    else {
-      alert(`Please fill ${f.join(", ")} details and Book a hotel ` )
-    }
+    
+      if(f.length===0){
+      setBooked(true);
+      }
+      else {
+        alert(`Please fill ${f.join(", ")} details and Book a hotel ` )
+      }
   }
   if (isloading) {
     return (
@@ -135,7 +139,7 @@ export const Payment = () => {
           Thank you!{" "}
           <span style={{ color: "rgb(212,49,49)" }}>
             {" "}
-            {formdata.firstName} {formdata.lastName}{" "}
+            {formdata.FirstName} {formdata.LastName}{" "}
           </span>
           for Booking from Our service Please visit Again......:){" "}
         </h1>
